@@ -1,6 +1,6 @@
 ﻿namespace FASTFOOD_DNC
 {
-    partial class TrangChu
+    partial class DangNhap
     {
         /// <summary>
         /// Required designer variable.
