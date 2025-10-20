@@ -17,6 +17,14 @@ namespace FASTFOOD_DNC
             InitializeComponent();
         }
 
-       
+        private void DangNhap_Load(object sender, EventArgs e)
+        {
+            txtTK.Enabled = true;
+        }
+
+        private void btnDN_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
