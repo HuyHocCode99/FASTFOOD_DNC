@@ -44,7 +44,9 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.btnDN = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.linklblDangKy = new System.Windows.Forms.LinkLabel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -161,24 +163,35 @@
             this.label4.TabIndex = 7;
             this.label4.Text = "Bạn chưa có tài khoản?\r\n";
             // 
-            // linkLabel1
+            // linklblDangKy
             // 
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkLabel1.LinkColor = System.Drawing.SystemColors.HotTrack;
-            this.linkLabel1.Location = new System.Drawing.Point(216, 324);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(69, 20);
-            this.linkLabel1.TabIndex = 8;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "Đăng ký";
+            this.linklblDangKy.AutoSize = true;
+            this.linklblDangKy.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linklblDangKy.LinkColor = System.Drawing.SystemColors.HotTrack;
+            this.linklblDangKy.Location = new System.Drawing.Point(216, 324);
+            this.linklblDangKy.Name = "linklblDangKy";
+            this.linklblDangKy.Size = new System.Drawing.Size(69, 20);
+            this.linklblDangKy.TabIndex = 8;
+            this.linklblDangKy.TabStop = true;
+            this.linklblDangKy.Text = "Đăng ký";
             // 
-            // TrangChu
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::FASTFOOD_DNC.Properties.Resources.Gemini_Generated_Image_8d1tew8d1tew8d1t;
+            this.pictureBox1.Location = new System.Drawing.Point(399, 1);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(445, 449);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 9;
+            this.pictureBox1.TabStop = false;
+            // 
+            // DangNhap
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(813, 421);
-            this.Controls.Add(this.linkLabel1);
+            this.ClientSize = new System.Drawing.Size(847, 451);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.linklblDangKy);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.btnDN);
             this.Controls.Add(this.textBox1);
@@ -186,8 +199,9 @@
             this.Controls.Add(this.txtTK);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Name = "TrangChu";
+            this.Name = "DangNhap";
             this.Text = "Đăng Nhập";
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -210,7 +224,8 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button btnDN;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.LinkLabel linkLabel1;
+        private System.Windows.Forms.LinkLabel linklblDangKy;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 
