@@ -45,6 +45,7 @@
             this.btnDN = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.linklblDK = new System.Windows.Forms.LinkLabel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
@@ -166,18 +167,31 @@
             // 
             // pictureBox2
             // 
-            this.pictureBox2.Location = new System.Drawing.Point(423, 4);
+            this.pictureBox2.Image = global::FASTFOOD_DNC.Properties.Resources.Gemini_Generated_Image_kanhhfkanhhfkanh;
+            this.pictureBox2.Location = new System.Drawing.Point(418, 1);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(367, 423);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.Size = new System.Drawing.Size(393, 440);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 8;
             this.pictureBox2.TabStop = false;
+            // 
+            // linklblDK
+            // 
+            this.linklblDK.AutoSize = true;
+            this.linklblDK.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linklblDK.Location = new System.Drawing.Point(202, 341);
+            this.linklblDK.Name = "linklblDK";
+            this.linklblDK.Size = new System.Drawing.Size(69, 20);
+            this.linklblDK.TabIndex = 9;
+            this.linklblDK.TabStop = true;
+            this.linklblDK.Text = "Đăng ký";
             // 
             // DangNhap
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(794, 428);
+            this.ClientSize = new System.Drawing.Size(811, 442);
+            this.Controls.Add(this.linklblDK);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.btnDN);
@@ -217,6 +231,7 @@
 
         private System.Windows.Forms.LinkLabel lnkDK;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.LinkLabel linklblDK;
     }
 }
 

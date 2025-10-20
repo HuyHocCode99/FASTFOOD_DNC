@@ -90,6 +90,7 @@
             this.label3.Size = new System.Drawing.Size(33, 18);
             this.label3.TabIndex = 5;
             this.label3.Text = "Tên";
+//            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label4
             // 
@@ -150,38 +151,41 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(379, 363);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(139, 18);
+            this.label7.Size = new System.Drawing.Size(157, 20);
             this.label7.TabIndex = 12;
             this.label7.Text = "Bạn đã có tài khoản";
             // 
             // linklblDangNhap
             // 
             this.linklblDangNhap.AutoSize = true;
-            this.linklblDangNhap.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linklblDangNhap.Location = new System.Drawing.Point(524, 363);
+            this.linklblDangNhap.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linklblDangNhap.Location = new System.Drawing.Point(542, 363);
             this.linklblDangNhap.Name = "linklblDangNhap";
-            this.linklblDangNhap.Size = new System.Drawing.Size(79, 18);
+            this.linklblDangNhap.Size = new System.Drawing.Size(89, 20);
             this.linklblDangNhap.TabIndex = 13;
             this.linklblDangNhap.TabStop = true;
             this.linklblDangNhap.Text = "Đăng nhập";
             // 
             // btnDangKy
             // 
-            this.btnDangKy.Location = new System.Drawing.Point(527, 399);
+            this.btnDangKy.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDangKy.Location = new System.Drawing.Point(527, 404);
             this.btnDangKy.Name = "btnDangKy";
-            this.btnDangKy.Size = new System.Drawing.Size(136, 46);
+            this.btnDangKy.Size = new System.Drawing.Size(151, 52);
             this.btnDangKy.TabIndex = 14;
             this.btnDangKy.Text = "Đăng ký";
             this.btnDangKy.UseVisualStyleBackColor = true;
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(1, -3);
+            this.pictureBox1.Image = global::FASTFOOD_DNC.Properties.Resources.Gemini_Generated_Image_5js8ll5js8ll5js8;
+            this.pictureBox1.Location = new System.Drawing.Point(1, -1);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(372, 457);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 15;
             this.pictureBox1.TabStop = false;
             // 
