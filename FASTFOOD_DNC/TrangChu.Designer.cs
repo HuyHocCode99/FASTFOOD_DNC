@@ -29,24 +29,24 @@
         private void InitializeComponent()
         {
             this.pnlNavigation = new System.Windows.Forms.Panel();
+            this.btnDangXuat = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.lblUserName = new System.Windows.Forms.Label();
             this.lblWelcome = new System.Windows.Forms.Label();
             this.pnlHeader = new System.Windows.Forms.Panel();
-            this.pnlMainContent = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.picLogo = new System.Windows.Forms.PictureBox();
-            this.btnDangXuat = new System.Windows.Forms.Button();
-            this.lblPageTitle = new System.Windows.Forms.Label();
-            this.lnkSignOut = new System.Windows.Forms.LinkLabel();
             this.lblCurrentUserInfo = new System.Windows.Forms.Label();
+            this.lnkSignOut = new System.Windows.Forms.LinkLabel();
+            this.lblPageTitle = new System.Windows.Forms.Label();
+            this.pnlMainContent = new System.Windows.Forms.Panel();
             this.picUserIcon = new System.Windows.Forms.PictureBox();
+            this.picLogo = new System.Windows.Forms.PictureBox();
             this.pnlNavigation.SuspendLayout();
             this.pnlHeader.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picUserIcon)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picLogo)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlNavigation
@@ -65,6 +65,80 @@
             this.pnlNavigation.Name = "pnlNavigation";
             this.pnlNavigation.Size = new System.Drawing.Size(230, 748);
             this.pnlNavigation.TabIndex = 0;
+            // 
+            // btnDangXuat
+            // 
+            this.btnDangXuat.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.btnDangXuat.FlatAppearance.BorderSize = 0;
+            this.btnDangXuat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDangXuat.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDangXuat.ForeColor = System.Drawing.Color.White;
+            this.btnDangXuat.Location = new System.Drawing.Point(0, 678);
+            this.btnDangXuat.Name = "btnDangXuat";
+            this.btnDangXuat.Size = new System.Drawing.Size(230, 70);
+            this.btnDangXuat.TabIndex = 7;
+            this.btnDangXuat.Text = "Đăng xuất";
+            this.btnDangXuat.UseVisualStyleBackColor = true;
+            // 
+            // button4
+            // 
+            this.button4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button4.FlatAppearance.BorderSize = 0;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.ForeColor = System.Drawing.Color.White;
+            this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button4.Location = new System.Drawing.Point(0, 434);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(230, 100);
+            this.button4.TabIndex = 6;
+            this.button4.Text = "Nhân viên";
+            this.button4.UseVisualStyleBackColor = true;
+            // 
+            // button3
+            // 
+            this.button3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.ForeColor = System.Drawing.Color.White;
+            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button3.Location = new System.Drawing.Point(0, 334);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(230, 100);
+            this.button3.TabIndex = 5;
+            this.button3.Text = "Menu";
+            this.button3.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            this.button2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button2.Location = new System.Drawing.Point(0, 234);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(230, 100);
+            this.button2.TabIndex = 4;
+            this.button2.Text = "Đơn hàng";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            this.button1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(0, 154);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(230, 80);
+            this.button1.TabIndex = 3;
+            this.button1.Text = "Bảng điều khiển ";
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // lblUserName
             // 
@@ -106,98 +180,29 @@
             this.pnlHeader.Size = new System.Drawing.Size(997, 50);
             this.pnlHeader.TabIndex = 1;
             // 
-            // pnlMainContent
+            // lblCurrentUserInfo
             // 
-            this.pnlMainContent.BackColor = System.Drawing.Color.White;
-            this.pnlMainContent.Dock = System.Windows.Forms.DockStyle.Right;
-            this.pnlMainContent.Location = new System.Drawing.Point(230, 50);
-            this.pnlMainContent.Name = "pnlMainContent";
-            this.pnlMainContent.Size = new System.Drawing.Size(997, 698);
-            this.pnlMainContent.TabIndex = 2;
+            this.lblCurrentUserInfo.AutoSize = true;
+            this.lblCurrentUserInfo.Dock = System.Windows.Forms.DockStyle.Right;
+            this.lblCurrentUserInfo.Location = new System.Drawing.Point(872, 0);
+            this.lblCurrentUserInfo.Name = "lblCurrentUserInfo";
+            this.lblCurrentUserInfo.Size = new System.Drawing.Size(49, 24);
+            this.lblCurrentUserInfo.TabIndex = 2;
+            this.lblCurrentUserInfo.Text = "label1";
+            this.lblCurrentUserInfo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblCurrentUserInfo.UseCompatibleTextRendering = true;
             // 
-            // button1
+            // lnkSignOut
             // 
-            this.button1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(0, 154);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(230, 80);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(0, 234);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(230, 100);
-            this.button2.TabIndex = 4;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // button3
-            // 
-            this.button3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(0, 334);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(230, 100);
-            this.button3.TabIndex = 5;
-            this.button3.Text = "button3";
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // button4
-            // 
-            this.button4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.Location = new System.Drawing.Point(0, 434);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(230, 100);
-            this.button4.TabIndex = 6;
-            this.button4.Text = "button4";
-            this.button4.UseVisualStyleBackColor = true;
-            // 
-            // picLogo
-            // 
-            this.picLogo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.picLogo.Location = new System.Drawing.Point(0, 0);
-            this.picLogo.Name = "picLogo";
-            this.picLogo.Size = new System.Drawing.Size(230, 100);
-            this.picLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picLogo.TabIndex = 0;
-            this.picLogo.TabStop = false;
-            // 
-            // btnDangXuat
-            // 
-            this.btnDangXuat.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.btnDangXuat.FlatAppearance.BorderSize = 0;
-            this.btnDangXuat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDangXuat.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDangXuat.ForeColor = System.Drawing.Color.White;
-            this.btnDangXuat.Location = new System.Drawing.Point(0, 678);
-            this.btnDangXuat.Name = "btnDangXuat";
-            this.btnDangXuat.Size = new System.Drawing.Size(230, 70);
-            this.btnDangXuat.TabIndex = 7;
-            this.btnDangXuat.Text = "Đăng xuất";
-            this.btnDangXuat.UseVisualStyleBackColor = true;
+            this.lnkSignOut.AutoSize = true;
+            this.lnkSignOut.Dock = System.Windows.Forms.DockStyle.Right;
+            this.lnkSignOut.Location = new System.Drawing.Point(921, 0);
+            this.lnkSignOut.Name = "lnkSignOut";
+            this.lnkSignOut.Size = new System.Drawing.Size(76, 19);
+            this.lnkSignOut.TabIndex = 1;
+            this.lnkSignOut.TabStop = true;
+            this.lnkSignOut.Text = "Đăng xuất";
+            this.lnkSignOut.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // lblPageTitle
             // 
@@ -213,29 +218,14 @@
             this.lblPageTitle.Text = "label1";
             this.lblPageTitle.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // lnkSignOut
+            // pnlMainContent
             // 
-            this.lnkSignOut.AutoSize = true;
-            this.lnkSignOut.Dock = System.Windows.Forms.DockStyle.Right;
-            this.lnkSignOut.Location = new System.Drawing.Point(921, 0);
-            this.lnkSignOut.Name = "lnkSignOut";
-            this.lnkSignOut.Size = new System.Drawing.Size(76, 19);
-            this.lnkSignOut.TabIndex = 1;
-            this.lnkSignOut.TabStop = true;
-            this.lnkSignOut.Text = "Đăng xuất";
-            this.lnkSignOut.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // lblCurrentUserInfo
-            // 
-            this.lblCurrentUserInfo.AutoSize = true;
-            this.lblCurrentUserInfo.Dock = System.Windows.Forms.DockStyle.Right;
-            this.lblCurrentUserInfo.Location = new System.Drawing.Point(872, 0);
-            this.lblCurrentUserInfo.Name = "lblCurrentUserInfo";
-            this.lblCurrentUserInfo.Size = new System.Drawing.Size(49, 24);
-            this.lblCurrentUserInfo.TabIndex = 2;
-            this.lblCurrentUserInfo.Text = "label1";
-            this.lblCurrentUserInfo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lblCurrentUserInfo.UseCompatibleTextRendering = true;
+            this.pnlMainContent.BackColor = System.Drawing.Color.White;
+            this.pnlMainContent.Dock = System.Windows.Forms.DockStyle.Right;
+            this.pnlMainContent.Location = new System.Drawing.Point(230, 50);
+            this.pnlMainContent.Name = "pnlMainContent";
+            this.pnlMainContent.Size = new System.Drawing.Size(997, 698);
+            this.pnlMainContent.TabIndex = 2;
             // 
             // picUserIcon
             // 
@@ -246,6 +236,16 @@
             this.picUserIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picUserIcon.TabIndex = 3;
             this.picUserIcon.TabStop = false;
+            // 
+            // picLogo
+            // 
+            this.picLogo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.picLogo.Location = new System.Drawing.Point(0, 0);
+            this.picLogo.Name = "picLogo";
+            this.picLogo.Size = new System.Drawing.Size(230, 100);
+            this.picLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picLogo.TabIndex = 0;
+            this.picLogo.TabStop = false;
             // 
             // TrangChu
             // 
@@ -265,8 +265,8 @@
             this.pnlNavigation.PerformLayout();
             this.pnlHeader.ResumeLayout(false);
             this.pnlHeader.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picLogo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picUserIcon)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picLogo)).EndInit();
             this.ResumeLayout(false);
 
         }

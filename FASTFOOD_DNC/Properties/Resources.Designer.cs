@@ -73,6 +73,16 @@ namespace FASTFOOD_DNC.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Gemini_Generated_Image_5js8ll5js8ll5js81 {
+            get {
+                object obj = ResourceManager.GetObject("Gemini_Generated_Image_5js8ll5js8ll5js81", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Gemini_Generated_Image_8d1tew8d1tew8d1t__1_ {
             get {
                 object obj = ResourceManager.GetObject("Gemini_Generated_Image_8d1tew8d1tew8d1t (1)", resourceCulture);
@@ -86,6 +96,16 @@ namespace FASTFOOD_DNC.Properties {
         internal static System.Drawing.Bitmap Gemini_Generated_Image_kanhhfkanhhfkanh {
             get {
                 object obj = ResourceManager.GetObject("Gemini_Generated_Image_kanhhfkanhhfkanh", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap istockphoto_1154731746_612x612 {
+            get {
+                object obj = ResourceManager.GetObject("istockphoto-1154731746-612x612", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

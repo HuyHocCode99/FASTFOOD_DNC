@@ -10,13 +10,11 @@ using System.Windows.Forms;
 
 namespace FASTFOOD_DNC
 {
-    public partial class TrangChu : Form
+    public partial class ucDonHang : UserControl
     {
-        public TrangChu()
+        public ucDonHang()
         {
             InitializeComponent();
         }
-
-       
     }
 }

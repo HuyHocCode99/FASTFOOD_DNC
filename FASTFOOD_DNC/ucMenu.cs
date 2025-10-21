@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace FASTFOOD_DNC
 {
-    public partial class TrangChu : Form
+    public partial class ucMenu : UserControl
     {
-        public TrangChu()
+        public ucMenu()
         {
             InitializeComponent();
         }

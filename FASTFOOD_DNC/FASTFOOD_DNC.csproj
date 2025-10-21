@@ -63,6 +63,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DangNhap.resx</DependentUpon>
     </Compile>
+    <Compile Include="ucKhachHang.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucKhachHang.Designer.cs">
+      <DependentUpon>ucKhachHang.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TrangChu.cs">
@@ -70,6 +76,24 @@
     </Compile>
     <Compile Include="TrangChu.Designer.cs">
       <DependentUpon>TrangChu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucDonHang.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucDonHang.Designer.cs">
+      <DependentUpon>ucDonHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucMenu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucMenu.Designer.cs">
+      <DependentUpon>ucMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucBangDieuKhien.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucBangDieuKhien.Designer.cs">
+      <DependentUpon>ucBangDieuKhien.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="DangKy.resx">
       <DependentUpon>DangKy.cs</DependentUpon>
@@ -80,12 +104,24 @@
       <LastGenOutput>DangNhap1.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="ucKhachHang.resx">
+      <DependentUpon>ucKhachHang.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="TrangChu.resx">
       <DependentUpon>TrangChu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucBangDieuKhien.resx">
+      <DependentUpon>ucBangDieuKhien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucDonHang.resx">
+      <DependentUpon>ucDonHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucMenu.resx">
+      <DependentUpon>ucMenu.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -116,6 +152,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Gemini_Generated_Image_kanhhfkanhhfkanh.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Gemini_Generated_Image_5js8ll5js8ll5js81.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\istockphoto-1154731746-612x612.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
