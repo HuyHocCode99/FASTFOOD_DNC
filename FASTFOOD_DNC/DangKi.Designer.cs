@@ -90,7 +90,6 @@
             this.label3.Size = new System.Drawing.Size(33, 18);
             this.label3.TabIndex = 5;
             this.label3.Text = "Tên";
-//            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label4
             // 
@@ -182,9 +181,9 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::FASTFOOD_DNC.Properties.Resources.Gemini_Generated_Image_5js8ll5js8ll5js8;
-            this.pictureBox1.Location = new System.Drawing.Point(1, -1);
+            this.pictureBox1.Location = new System.Drawing.Point(1, -13);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(372, 457);
+            this.pictureBox1.Size = new System.Drawing.Size(372, 480);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 15;
             this.pictureBox1.TabStop = false;
