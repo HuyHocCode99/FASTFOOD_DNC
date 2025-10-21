@@ -83,17 +83,17 @@
     <Compile Include="ucDonHang.Designer.cs">
       <DependentUpon>ucDonHang.cs</DependentUpon>
     </Compile>
-    <Compile Include="ucMenu.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="ucMenu.Designer.cs">
-      <DependentUpon>ucMenu.cs</DependentUpon>
-    </Compile>
     <Compile Include="ucBangDieuKhien.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="ucBangDieuKhien.Designer.cs">
       <DependentUpon>ucBangDieuKhien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucMenu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucMenu.Designer.cs">
+      <DependentUpon>ucMenu.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="DangKy.resx">
       <DependentUpon>DangKy.cs</DependentUpon>
