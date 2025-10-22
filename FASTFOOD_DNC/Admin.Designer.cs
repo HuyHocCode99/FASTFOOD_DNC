@@ -1,6 +1,6 @@
 ﻿namespace FASTFOOD_DNC
 {
-    partial class TrangChu
+    partial class frmAdmin
     {
         /// <summary>
         /// Required designer variable.
@@ -232,7 +232,7 @@
             this.pnlMainContent.Size = new System.Drawing.Size(0, 698);
             this.pnlMainContent.TabIndex = 2;
             // 
-            // TrangChu
+            // frmAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -242,9 +242,9 @@
             this.Controls.Add(this.pnlNavigation);
             this.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.Name = "TrangChu";
+            this.Name = "frmAdmin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.WindowsDefaultBounds;
-            this.Text = "TrangChu";
+            this.Text = "Admin";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.pnlNavigation.ResumeLayout(false);
             this.pnlNavigation.PerformLayout();
@@ -267,11 +267,11 @@
         private System.Windows.Forms.Label lblUserName;
         private System.Windows.Forms.Button btnMenu;
         private System.Windows.Forms.Button btnDonHang;
-        private System.Windows.Forms.Button btnDangXuat;
-        private System.Windows.Forms.Label lblPageTitle;
         private System.Windows.Forms.Label lblCurrentUserInfo;
         private System.Windows.Forms.LinkLabel lnkSignOut;
         private System.Windows.Forms.PictureBox picUserIcon;
         private System.Windows.Forms.Button btnKhachHang;
+        private System.Windows.Forms.Label lblPageTitle;
+        private System.Windows.Forms.Button btnDangXuat;
     }
 }
