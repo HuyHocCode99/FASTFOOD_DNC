@@ -143,7 +143,7 @@
             // 
             this.linklblDangNhap.AutoSize = true;
             this.linklblDangNhap.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linklblDangNhap.Location = new System.Drawing.Point(692, 449);
+            this.linklblDangNhap.Location = new System.Drawing.Point(655, 449);
             this.linklblDangNhap.Name = "linklblDangNhap";
             this.linklblDangNhap.Size = new System.Drawing.Size(89, 20);
             this.linklblDangNhap.TabIndex = 13;
