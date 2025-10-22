@@ -194,7 +194,7 @@
             // 
             this.picUserIcon.Dock = System.Windows.Forms.DockStyle.Right;
             this.picUserIcon.Image = global::FASTFOOD_DNC.Properties.Resources.teacher_240_1128987;
-            this.picUserIcon.Location = new System.Drawing.Point(854, 0);
+            this.picUserIcon.Location = new System.Drawing.Point(805, 0);
             this.picUserIcon.Name = "picUserIcon";
             this.picUserIcon.Size = new System.Drawing.Size(67, 50);
             this.picUserIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -204,7 +204,8 @@
             // lblCurrentUserInfo
             // 
             this.lblCurrentUserInfo.AutoSize = true;
-            this.lblCurrentUserInfo.Location = new System.Drawing.Point(808, 2);
+            this.lblCurrentUserInfo.Dock = System.Windows.Forms.DockStyle.Right;
+            this.lblCurrentUserInfo.Location = new System.Drawing.Point(872, 0);
             this.lblCurrentUserInfo.Name = "lblCurrentUserInfo";
             this.lblCurrentUserInfo.Size = new System.Drawing.Size(49, 24);
             this.lblCurrentUserInfo.TabIndex = 2;
@@ -240,11 +241,12 @@
             // 
             // pnlMainContent
             // 
+            this.pnlMainContent.AutoSize = true;
             this.pnlMainContent.BackColor = System.Drawing.Color.White;
             this.pnlMainContent.Dock = System.Windows.Forms.DockStyle.Right;
-            this.pnlMainContent.Location = new System.Drawing.Point(230, 50);
+            this.pnlMainContent.Location = new System.Drawing.Point(1227, 50);
             this.pnlMainContent.Name = "pnlMainContent";
-            this.pnlMainContent.Size = new System.Drawing.Size(997, 698);
+            this.pnlMainContent.Size = new System.Drawing.Size(0, 698);
             this.pnlMainContent.TabIndex = 2;
             // 
             // TrangChu
@@ -258,7 +260,7 @@
             this.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "TrangChu";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.WindowsDefaultBounds;
             this.Text = "TrangChu";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.pnlNavigation.ResumeLayout(false);
@@ -268,6 +270,7 @@
             this.pnlHeader.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picUserIcon)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
