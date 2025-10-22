@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace FASTFOOD_DNC
 {
-    public partial class DangNhap : Form
+    public partial class frmDangNhap : Form
     {
-        public DangNhap()
+        public frmDangNhap()
         {
             InitializeComponent();
         }
