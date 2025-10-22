@@ -33,7 +33,6 @@
             this.btnKhachHang = new System.Windows.Forms.Button();
             this.btnMenu = new System.Windows.Forms.Button();
             this.btnDonHang = new System.Windows.Forms.Button();
-            this.lblUserName = new System.Windows.Forms.Label();
             this.lblWelcome = new System.Windows.Forms.Label();
             this.picLogo = new System.Windows.Forms.PictureBox();
             this.pnlHeader = new System.Windows.Forms.Panel();
@@ -42,6 +41,7 @@
             this.lnkSignOut = new System.Windows.Forms.LinkLabel();
             this.lblPageTitle = new System.Windows.Forms.Label();
             this.pnlMainContent = new System.Windows.Forms.Panel();
+            this.lblUserName = new System.Windows.Forms.Label();
             this.pnlNavigation.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picLogo)).BeginInit();
             this.pnlHeader.SuspendLayout();
@@ -122,19 +122,6 @@
             this.btnDonHang.TabIndex = 4;
             this.btnDonHang.Text = "Đơn hàng";
             this.btnDonHang.UseVisualStyleBackColor = true;
-            // 
-            // lblUserName
-            // 
-            this.lblUserName.AutoSize = true;
-            this.lblUserName.Dock = System.Windows.Forms.DockStyle.Top;
-            this.lblUserName.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUserName.ForeColor = System.Drawing.Color.White;
-            this.lblUserName.Location = new System.Drawing.Point(0, 132);
-            this.lblUserName.Name = "lblUserName";
-            this.lblUserName.Size = new System.Drawing.Size(63, 22);
-            this.lblUserName.TabIndex = 2;
-            this.lblUserName.Text = "Admin";
-            this.lblUserName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblWelcome
             // 
@@ -232,6 +219,19 @@
             this.pnlMainContent.Size = new System.Drawing.Size(0, 698);
             this.pnlMainContent.TabIndex = 2;
             // 
+            // lblUserName
+            // 
+            this.lblUserName.AutoSize = true;
+            this.lblUserName.Dock = System.Windows.Forms.DockStyle.Top;
+            this.lblUserName.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUserName.ForeColor = System.Drawing.Color.White;
+            this.lblUserName.Location = new System.Drawing.Point(0, 132);
+            this.lblUserName.Name = "lblUserName";
+            this.lblUserName.Size = new System.Drawing.Size(63, 22);
+            this.lblUserName.TabIndex = 2;
+            this.lblUserName.Text = "Admin";
+            this.lblUserName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // frmAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
@@ -264,7 +264,6 @@
         private System.Windows.Forms.Panel pnlMainContent;
         private System.Windows.Forms.Label lblWelcome;
         private System.Windows.Forms.PictureBox picLogo;
-        private System.Windows.Forms.Label lblUserName;
         private System.Windows.Forms.Button btnMenu;
         private System.Windows.Forms.Button btnDonHang;
         private System.Windows.Forms.Label lblCurrentUserInfo;
@@ -273,5 +272,6 @@
         private System.Windows.Forms.Button btnKhachHang;
         private System.Windows.Forms.Label lblPageTitle;
         private System.Windows.Forms.Button btnDangXuat;
+        private System.Windows.Forms.Label lblUserName;
     }
 }
