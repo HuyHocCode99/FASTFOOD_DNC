@@ -43,6 +43,7 @@
             this.lnkSignOut = new System.Windows.Forms.LinkLabel();
             this.lblPageTitle = new System.Windows.Forms.Label();
             this.pnlMainContent = new System.Windows.Forms.Panel();
+            this.btnNhanVien = new System.Windows.Forms.Button();
             this.pnlNavigation.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picLogo)).BeginInit();
             this.pnlHeader.SuspendLayout();
@@ -52,6 +53,7 @@
             // pnlNavigation
             // 
             this.pnlNavigation.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(40)))), ((int)(((byte)(30)))));
+            this.pnlNavigation.Controls.Add(this.btnNhanVien);
             this.pnlNavigation.Controls.Add(this.btnDangXuat);
             this.pnlNavigation.Controls.Add(this.btnKhachHang);
             this.pnlNavigation.Controls.Add(this.btnMenu);
@@ -249,6 +251,21 @@
             this.pnlMainContent.Size = new System.Drawing.Size(0, 698);
             this.pnlMainContent.TabIndex = 2;
             // 
+            // btnNhanVien
+            // 
+            this.btnNhanVien.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnNhanVien.FlatAppearance.BorderSize = 0;
+            this.btnNhanVien.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNhanVien.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNhanVien.ForeColor = System.Drawing.Color.White;
+            this.btnNhanVien.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnNhanVien.Location = new System.Drawing.Point(0, 534);
+            this.btnNhanVien.Name = "btnNhanVien";
+            this.btnNhanVien.Size = new System.Drawing.Size(230, 100);
+            this.btnNhanVien.TabIndex = 8;
+            this.btnNhanVien.Text = "Nhân viên";
+            this.btnNhanVien.UseVisualStyleBackColor = true;
+            // 
             // TrangChu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
@@ -291,5 +308,6 @@
         private System.Windows.Forms.LinkLabel lnkSignOut;
         private System.Windows.Forms.PictureBox picUserIcon;
         private System.Windows.Forms.Button btnKhachHang;
+        private System.Windows.Forms.Button btnNhanVien;
     }
 }
