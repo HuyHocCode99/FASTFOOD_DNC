@@ -1,6 +1,6 @@
 ﻿namespace FASTFOOD_DNC
 {
-    partial class DangNhap
+    partial class frmDangNhap
     {
         /// <summary>
         /// Required designer variable.
@@ -186,7 +186,7 @@
             this.linklblDK.TabStop = true;
             this.linklblDK.Text = "Đăng ký";
             // 
-            // DangNhap
+            // frmDangNhap
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -201,7 +201,8 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Name = "DangNhap";
+            this.Name = "frmDangNhap";
+            this.Text = "Đăng nhập";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

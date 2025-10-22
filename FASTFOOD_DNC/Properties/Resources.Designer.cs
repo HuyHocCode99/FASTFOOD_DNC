@@ -109,5 +109,15 @@ namespace FASTFOOD_DNC.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap teacher_240_1128987 {
+            get {
+                object obj = ResourceManager.GetObject("teacher-240-1128987", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }
