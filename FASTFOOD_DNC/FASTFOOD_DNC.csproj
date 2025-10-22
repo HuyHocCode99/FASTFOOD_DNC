@@ -63,11 +63,23 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DangNhap.resx</DependentUpon>
     </Compile>
+    <Compile Include="ucDonHangKH.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucDonHangKH.Designer.cs">
+      <DependentUpon>ucDonHangKH.cs</DependentUpon>
+    </Compile>
     <Compile Include="KhachHang.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="KhachHang.Designer.cs">
       <DependentUpon>KhachHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucGIoHang.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucGIoHang.Designer.cs">
+      <DependentUpon>ucGIoHang.cs</DependentUpon>
     </Compile>
     <Compile Include="ucKhachHang.cs">
       <SubType>UserControl</SubType>
@@ -95,6 +107,12 @@
     <Compile Include="ucMenu.Designer.cs">
       <DependentUpon>ucMenu.cs</DependentUpon>
     </Compile>
+    <Compile Include="ucMenuKH.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucMenuKH.Designer.cs">
+      <DependentUpon>ucMenuKH.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="DangKy.resx">
       <DependentUpon>DangKy.cs</DependentUpon>
     </EmbeddedResource>
@@ -103,6 +121,9 @@
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>DangNhap1.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucDonHangKH.resx">
+      <DependentUpon>ucDonHangKH.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="KhachHang.resx">
       <DependentUpon>KhachHang.cs</DependentUpon>
