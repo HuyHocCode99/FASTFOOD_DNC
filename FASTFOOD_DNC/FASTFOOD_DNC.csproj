@@ -83,12 +83,6 @@
     <Compile Include="ucDonHang.Designer.cs">
       <DependentUpon>ucDonHang.cs</DependentUpon>
     </Compile>
-    <Compile Include="ucBangDieuKhien.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="ucBangDieuKhien.Designer.cs">
-      <DependentUpon>ucBangDieuKhien.cs</DependentUpon>
-    </Compile>
     <Compile Include="ucMenu.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -113,9 +107,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="TrangChu.resx">
       <DependentUpon>TrangChu.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ucBangDieuKhien.resx">
-      <DependentUpon>ucBangDieuKhien.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ucDonHang.resx">
       <DependentUpon>ucDonHang.cs</DependentUpon>

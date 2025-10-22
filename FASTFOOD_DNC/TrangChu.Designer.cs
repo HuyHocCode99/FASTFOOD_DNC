@@ -33,7 +33,6 @@
             this.btnKhachHang = new System.Windows.Forms.Button();
             this.btnMenu = new System.Windows.Forms.Button();
             this.btnDonHang = new System.Windows.Forms.Button();
-            this.btnBangDieuKhien = new System.Windows.Forms.Button();
             this.lblUserName = new System.Windows.Forms.Label();
             this.lblWelcome = new System.Windows.Forms.Label();
             this.picLogo = new System.Windows.Forms.PictureBox();
@@ -43,7 +42,6 @@
             this.lnkSignOut = new System.Windows.Forms.LinkLabel();
             this.lblPageTitle = new System.Windows.Forms.Label();
             this.pnlMainContent = new System.Windows.Forms.Panel();
-            this.btnNhanVien = new System.Windows.Forms.Button();
             this.pnlNavigation.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picLogo)).BeginInit();
             this.pnlHeader.SuspendLayout();
@@ -53,12 +51,10 @@
             // pnlNavigation
             // 
             this.pnlNavigation.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(40)))), ((int)(((byte)(30)))));
-            this.pnlNavigation.Controls.Add(this.btnNhanVien);
             this.pnlNavigation.Controls.Add(this.btnDangXuat);
             this.pnlNavigation.Controls.Add(this.btnKhachHang);
             this.pnlNavigation.Controls.Add(this.btnMenu);
             this.pnlNavigation.Controls.Add(this.btnDonHang);
-            this.pnlNavigation.Controls.Add(this.btnBangDieuKhien);
             this.pnlNavigation.Controls.Add(this.lblUserName);
             this.pnlNavigation.Controls.Add(this.lblWelcome);
             this.pnlNavigation.Controls.Add(this.picLogo);
@@ -90,7 +86,7 @@
             this.btnKhachHang.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnKhachHang.ForeColor = System.Drawing.Color.White;
             this.btnKhachHang.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnKhachHang.Location = new System.Drawing.Point(0, 434);
+            this.btnKhachHang.Location = new System.Drawing.Point(0, 354);
             this.btnKhachHang.Name = "btnKhachHang";
             this.btnKhachHang.Size = new System.Drawing.Size(230, 100);
             this.btnKhachHang.TabIndex = 6;
@@ -105,7 +101,7 @@
             this.btnMenu.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMenu.ForeColor = System.Drawing.Color.White;
             this.btnMenu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMenu.Location = new System.Drawing.Point(0, 334);
+            this.btnMenu.Location = new System.Drawing.Point(0, 254);
             this.btnMenu.Name = "btnMenu";
             this.btnMenu.Size = new System.Drawing.Size(230, 100);
             this.btnMenu.TabIndex = 5;
@@ -120,27 +116,12 @@
             this.btnDonHang.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDonHang.ForeColor = System.Drawing.Color.White;
             this.btnDonHang.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDonHang.Location = new System.Drawing.Point(0, 234);
+            this.btnDonHang.Location = new System.Drawing.Point(0, 154);
             this.btnDonHang.Name = "btnDonHang";
             this.btnDonHang.Size = new System.Drawing.Size(230, 100);
             this.btnDonHang.TabIndex = 4;
             this.btnDonHang.Text = "Đơn hàng";
             this.btnDonHang.UseVisualStyleBackColor = true;
-            // 
-            // btnBangDieuKhien
-            // 
-            this.btnBangDieuKhien.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnBangDieuKhien.FlatAppearance.BorderSize = 0;
-            this.btnBangDieuKhien.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBangDieuKhien.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBangDieuKhien.ForeColor = System.Drawing.Color.White;
-            this.btnBangDieuKhien.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBangDieuKhien.Location = new System.Drawing.Point(0, 154);
-            this.btnBangDieuKhien.Name = "btnBangDieuKhien";
-            this.btnBangDieuKhien.Size = new System.Drawing.Size(230, 80);
-            this.btnBangDieuKhien.TabIndex = 3;
-            this.btnBangDieuKhien.Text = "Bảng điều khiển ";
-            this.btnBangDieuKhien.UseVisualStyleBackColor = true;
             // 
             // lblUserName
             // 
@@ -251,21 +232,6 @@
             this.pnlMainContent.Size = new System.Drawing.Size(0, 698);
             this.pnlMainContent.TabIndex = 2;
             // 
-            // btnNhanVien
-            // 
-            this.btnNhanVien.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnNhanVien.FlatAppearance.BorderSize = 0;
-            this.btnNhanVien.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNhanVien.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNhanVien.ForeColor = System.Drawing.Color.White;
-            this.btnNhanVien.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnNhanVien.Location = new System.Drawing.Point(0, 534);
-            this.btnNhanVien.Name = "btnNhanVien";
-            this.btnNhanVien.Size = new System.Drawing.Size(230, 100);
-            this.btnNhanVien.TabIndex = 8;
-            this.btnNhanVien.Text = "Nhân viên";
-            this.btnNhanVien.UseVisualStyleBackColor = true;
-            // 
             // TrangChu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
@@ -299,7 +265,6 @@
         private System.Windows.Forms.Label lblWelcome;
         private System.Windows.Forms.PictureBox picLogo;
         private System.Windows.Forms.Label lblUserName;
-        private System.Windows.Forms.Button btnBangDieuKhien;
         private System.Windows.Forms.Button btnMenu;
         private System.Windows.Forms.Button btnDonHang;
         private System.Windows.Forms.Button btnDangXuat;
@@ -308,6 +273,5 @@
         private System.Windows.Forms.LinkLabel lnkSignOut;
         private System.Windows.Forms.PictureBox picUserIcon;
         private System.Windows.Forms.Button btnKhachHang;
-        private System.Windows.Forms.Button btnNhanVien;
     }
 }
