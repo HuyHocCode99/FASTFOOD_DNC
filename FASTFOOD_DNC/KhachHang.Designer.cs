@@ -29,18 +29,18 @@
         private void InitializeComponent()
         {
             this.pnlNavigationKH = new System.Windows.Forms.Panel();
+            this.btnDangXuatKH = new System.Windows.Forms.Button();
+            this.btnGioHang = new System.Windows.Forms.Button();
+            this.btnDonHangKH = new System.Windows.Forms.Button();
+            this.btnMenuKH = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.lblWelcomeKH = new System.Windows.Forms.Label();
             this.picLogoKH = new System.Windows.Forms.PictureBox();
             this.pnlHeaderKH = new System.Windows.Forms.Panel();
-            this.lblPageTitleKH = new System.Windows.Forms.Label();
-            this.lnkSignOutKH = new System.Windows.Forms.LinkLabel();
-            this.lblCurrentUserInfoKH = new System.Windows.Forms.Label();
             this.picUserIconKH = new System.Windows.Forms.PictureBox();
-            this.lblWelcomeKH = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.btnMenuKH = new System.Windows.Forms.Button();
-            this.btnDonHangKH = new System.Windows.Forms.Button();
-            this.btnGioHang = new System.Windows.Forms.Button();
-            this.btnDangXuatKH = new System.Windows.Forms.Button();
+            this.lblCurrentUserInfoKH = new System.Windows.Forms.Label();
+            this.lnkSignOutKH = new System.Windows.Forms.LinkLabel();
+            this.lblPageTitleKH = new System.Windows.Forms.Label();
             this.pnlNavigationKH.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picLogoKH)).BeginInit();
             this.pnlHeaderKH.SuspendLayout();
@@ -62,6 +62,93 @@
             this.pnlNavigationKH.Name = "pnlNavigationKH";
             this.pnlNavigationKH.Size = new System.Drawing.Size(230, 748);
             this.pnlNavigationKH.TabIndex = 0;
+            // 
+            // btnDangXuatKH
+            // 
+            this.btnDangXuatKH.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.btnDangXuatKH.FlatAppearance.BorderSize = 0;
+            this.btnDangXuatKH.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDangXuatKH.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDangXuatKH.ForeColor = System.Drawing.Color.White;
+            this.btnDangXuatKH.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDangXuatKH.Location = new System.Drawing.Point(0, 678);
+            this.btnDangXuatKH.Name = "btnDangXuatKH";
+            this.btnDangXuatKH.Size = new System.Drawing.Size(230, 70);
+            this.btnDangXuatKH.TabIndex = 6;
+            this.btnDangXuatKH.Text = "Đăng xuất";
+            this.btnDangXuatKH.UseVisualStyleBackColor = true;
+            // 
+            // btnGioHang
+            // 
+            this.btnGioHang.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnGioHang.FlatAppearance.BorderSize = 0;
+            this.btnGioHang.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGioHang.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGioHang.ForeColor = System.Drawing.Color.White;
+            this.btnGioHang.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnGioHang.Location = new System.Drawing.Point(0, 364);
+            this.btnGioHang.Name = "btnGioHang";
+            this.btnGioHang.Size = new System.Drawing.Size(230, 100);
+            this.btnGioHang.TabIndex = 5;
+            this.btnGioHang.Text = "Giỏ hàng";
+            this.btnGioHang.UseVisualStyleBackColor = true;
+            // 
+            // btnDonHangKH
+            // 
+            this.btnDonHangKH.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnDonHangKH.FlatAppearance.BorderSize = 0;
+            this.btnDonHangKH.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDonHangKH.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDonHangKH.ForeColor = System.Drawing.Color.White;
+            this.btnDonHangKH.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDonHangKH.Location = new System.Drawing.Point(0, 264);
+            this.btnDonHangKH.Name = "btnDonHangKH";
+            this.btnDonHangKH.Size = new System.Drawing.Size(230, 100);
+            this.btnDonHangKH.TabIndex = 4;
+            this.btnDonHangKH.Text = "Đơn hàng";
+            this.btnDonHangKH.UseVisualStyleBackColor = true;
+            // 
+            // btnMenuKH
+            // 
+            this.btnMenuKH.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnMenuKH.FlatAppearance.BorderSize = 0;
+            this.btnMenuKH.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMenuKH.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMenuKH.ForeColor = System.Drawing.Color.White;
+            this.btnMenuKH.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnMenuKH.Location = new System.Drawing.Point(0, 164);
+            this.btnMenuKH.Name = "btnMenuKH";
+            this.btnMenuKH.Size = new System.Drawing.Size(230, 100);
+            this.btnMenuKH.TabIndex = 3;
+            this.btnMenuKH.Text = "Menu";
+            this.btnMenuKH.UseVisualStyleBackColor = true;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(0, 137);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(127, 27);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Khách hàng";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblWelcomeKH
+            // 
+            this.lblWelcomeKH.AutoSize = true;
+            this.lblWelcomeKH.Dock = System.Windows.Forms.DockStyle.Top;
+            this.lblWelcomeKH.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblWelcomeKH.ForeColor = System.Drawing.Color.White;
+            this.lblWelcomeKH.Location = new System.Drawing.Point(0, 100);
+            this.lblWelcomeKH.Name = "lblWelcomeKH";
+            this.lblWelcomeKH.Padding = new System.Windows.Forms.Padding(0, 10, 0, 0);
+            this.lblWelcomeKH.Size = new System.Drawing.Size(105, 37);
+            this.lblWelcomeKH.TabIndex = 1;
+            this.lblWelcomeKH.Text = "Xin chào,";
+            this.lblWelcomeKH.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // picLogoKH
             // 
@@ -85,6 +172,38 @@
             this.pnlHeaderKH.Size = new System.Drawing.Size(997, 50);
             this.pnlHeaderKH.TabIndex = 2;
             // 
+            // picUserIconKH
+            // 
+            this.picUserIconKH.Dock = System.Windows.Forms.DockStyle.Right;
+            this.picUserIconKH.Image = global::FASTFOOD_DNC.Properties.Resources.teacher_240_1128987;
+            this.picUserIconKH.Location = new System.Drawing.Point(770, 0);
+            this.picUserIconKH.Name = "picUserIconKH";
+            this.picUserIconKH.Size = new System.Drawing.Size(71, 50);
+            this.picUserIconKH.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picUserIconKH.TabIndex = 3;
+            this.picUserIconKH.TabStop = false;
+            // 
+            // lblCurrentUserInfoKH
+            // 
+            this.lblCurrentUserInfoKH.AutoSize = true;
+            this.lblCurrentUserInfoKH.Dock = System.Windows.Forms.DockStyle.Right;
+            this.lblCurrentUserInfoKH.Location = new System.Drawing.Point(841, 0);
+            this.lblCurrentUserInfoKH.Name = "lblCurrentUserInfoKH";
+            this.lblCurrentUserInfoKH.Size = new System.Drawing.Size(61, 23);
+            this.lblCurrentUserInfoKH.TabIndex = 2;
+            this.lblCurrentUserInfoKH.Text = "label1";
+            // 
+            // lnkSignOutKH
+            // 
+            this.lnkSignOutKH.AutoSize = true;
+            this.lnkSignOutKH.Dock = System.Windows.Forms.DockStyle.Right;
+            this.lnkSignOutKH.Location = new System.Drawing.Point(902, 0);
+            this.lnkSignOutKH.Name = "lnkSignOutKH";
+            this.lnkSignOutKH.Size = new System.Drawing.Size(95, 23);
+            this.lnkSignOutKH.TabIndex = 1;
+            this.lnkSignOutKH.TabStop = true;
+            this.lnkSignOutKH.Text = "Đăng xuất";
+            // 
             // lblPageTitleKH
             // 
             this.lblPageTitleKH.AutoSize = true;
@@ -92,133 +211,14 @@
             this.lblPageTitleKH.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPageTitleKH.Location = new System.Drawing.Point(0, 0);
             this.lblPageTitleKH.Name = "lblPageTitleKH";
-            this.lblPageTitleKH.Size = new System.Drawing.Size(60, 23);
+            this.lblPageTitleKH.Size = new System.Drawing.Size(74, 26);
             this.lblPageTitleKH.TabIndex = 0;
             this.lblPageTitleKH.Text = "label1";
             this.lblPageTitleKH.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // lnkSignOutKH
-            // 
-            this.lnkSignOutKH.AutoSize = true;
-            this.lnkSignOutKH.Dock = System.Windows.Forms.DockStyle.Right;
-            this.lnkSignOutKH.Location = new System.Drawing.Point(921, 0);
-            this.lnkSignOutKH.Name = "lnkSignOutKH";
-            this.lnkSignOutKH.Size = new System.Drawing.Size(76, 19);
-            this.lnkSignOutKH.TabIndex = 1;
-            this.lnkSignOutKH.TabStop = true;
-            this.lnkSignOutKH.Text = "Đăng xuất";
-            // 
-            // lblCurrentUserInfoKH
-            // 
-            this.lblCurrentUserInfoKH.AutoSize = true;
-            this.lblCurrentUserInfoKH.Dock = System.Windows.Forms.DockStyle.Right;
-            this.lblCurrentUserInfoKH.Location = new System.Drawing.Point(870, 0);
-            this.lblCurrentUserInfoKH.Name = "lblCurrentUserInfoKH";
-            this.lblCurrentUserInfoKH.Size = new System.Drawing.Size(51, 19);
-            this.lblCurrentUserInfoKH.TabIndex = 2;
-            this.lblCurrentUserInfoKH.Text = "label1";
-            // 
-            // picUserIconKH
-            // 
-            this.picUserIconKH.Dock = System.Windows.Forms.DockStyle.Right;
-            this.picUserIconKH.Image = global::FASTFOOD_DNC.Properties.Resources.teacher_240_1128987;
-            this.picUserIconKH.Location = new System.Drawing.Point(799, 0);
-            this.picUserIconKH.Name = "picUserIconKH";
-            this.picUserIconKH.Size = new System.Drawing.Size(71, 50);
-            this.picUserIconKH.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picUserIconKH.TabIndex = 3;
-            this.picUserIconKH.TabStop = false;
-            // 
-            // lblWelcomeKH
-            // 
-            this.lblWelcomeKH.AutoSize = true;
-            this.lblWelcomeKH.Dock = System.Windows.Forms.DockStyle.Top;
-            this.lblWelcomeKH.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblWelcomeKH.ForeColor = System.Drawing.Color.White;
-            this.lblWelcomeKH.Location = new System.Drawing.Point(0, 100);
-            this.lblWelcomeKH.Name = "lblWelcomeKH";
-            this.lblWelcomeKH.Padding = new System.Windows.Forms.Padding(0, 10, 0, 0);
-            this.lblWelcomeKH.Size = new System.Drawing.Size(86, 32);
-            this.lblWelcomeKH.TabIndex = 1;
-            this.lblWelcomeKH.Text = "Xin chào,";
-            this.lblWelcomeKH.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(0, 132);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(101, 22);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Khách hàng";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // btnMenuKH
-            // 
-            this.btnMenuKH.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnMenuKH.FlatAppearance.BorderSize = 0;
-            this.btnMenuKH.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMenuKH.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMenuKH.ForeColor = System.Drawing.Color.White;
-            this.btnMenuKH.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMenuKH.Location = new System.Drawing.Point(0, 154);
-            this.btnMenuKH.Name = "btnMenuKH";
-            this.btnMenuKH.Size = new System.Drawing.Size(230, 100);
-            this.btnMenuKH.TabIndex = 3;
-            this.btnMenuKH.Text = "Menu";
-            this.btnMenuKH.UseVisualStyleBackColor = true;
-            // 
-            // btnDonHangKH
-            // 
-            this.btnDonHangKH.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnDonHangKH.FlatAppearance.BorderSize = 0;
-            this.btnDonHangKH.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDonHangKH.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDonHangKH.ForeColor = System.Drawing.Color.White;
-            this.btnDonHangKH.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDonHangKH.Location = new System.Drawing.Point(0, 254);
-            this.btnDonHangKH.Name = "btnDonHangKH";
-            this.btnDonHangKH.Size = new System.Drawing.Size(230, 100);
-            this.btnDonHangKH.TabIndex = 4;
-            this.btnDonHangKH.Text = "Đơn hàng";
-            this.btnDonHangKH.UseVisualStyleBackColor = true;
-            // 
-            // btnGioHang
-            // 
-            this.btnGioHang.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnGioHang.FlatAppearance.BorderSize = 0;
-            this.btnGioHang.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGioHang.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGioHang.ForeColor = System.Drawing.Color.White;
-            this.btnGioHang.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGioHang.Location = new System.Drawing.Point(0, 354);
-            this.btnGioHang.Name = "btnGioHang";
-            this.btnGioHang.Size = new System.Drawing.Size(230, 100);
-            this.btnGioHang.TabIndex = 5;
-            this.btnGioHang.Text = "Giỏ hàng";
-            this.btnGioHang.UseVisualStyleBackColor = true;
-            // 
-            // btnDangXuatKH
-            // 
-            this.btnDangXuatKH.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.btnDangXuatKH.FlatAppearance.BorderSize = 0;
-            this.btnDangXuatKH.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDangXuatKH.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDangXuatKH.ForeColor = System.Drawing.Color.White;
-            this.btnDangXuatKH.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDangXuatKH.Location = new System.Drawing.Point(0, 678);
-            this.btnDangXuatKH.Name = "btnDangXuatKH";
-            this.btnDangXuatKH.Size = new System.Drawing.Size(230, 70);
-            this.btnDangXuatKH.TabIndex = 6;
-            this.btnDangXuatKH.Text = "Đăng xuất";
-            this.btnDangXuatKH.UseVisualStyleBackColor = true;
-            // 
             // KhachHang
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1227, 748);
             this.Controls.Add(this.pnlHeaderKH);
