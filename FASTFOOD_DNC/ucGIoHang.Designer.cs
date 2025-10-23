@@ -29,18 +29,24 @@
         private void InitializeComponent()
         {
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.dgvGioHang = new System.Windows.Forms.DataGridView();
+            this.colTenMon = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colSoLuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colThanhTien = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label2 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.btnXoaMon = new System.Windows.Forms.Button();
+            this.btnDatHang = new System.Windows.Forms.Button();
+            this.lblTongTien = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.dgvLichSuDonHang = new System.Windows.Forms.DataGridView();
-            this.MaDonHang = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NgayDat = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TongTien = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TrangThai = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lblTieuDeChiTiet = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvLichSuDonHang)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvGioHang)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // splitContainer1
@@ -51,86 +57,133 @@
             // 
             // splitContainer1.Panel1
             // 
-            this.splitContainer1.Panel1.Controls.Add(this.dgvLichSuDonHang);
-            this.splitContainer1.Panel1.Controls.Add(this.label1);
+            this.splitContainer1.Panel1.Controls.Add(this.pictureBox1);
             // 
             // splitContainer1.Panel2
             // 
-            this.splitContainer1.Panel2.Controls.Add(this.lblTieuDeChiTiet);
-            this.splitContainer1.Size = new System.Drawing.Size(1079, 704);
-            this.splitContainer1.SplitterDistance = 529;
+            this.splitContainer1.Panel2.Controls.Add(this.dgvGioHang);
+            this.splitContainer1.Panel2.Controls.Add(this.label2);
+            this.splitContainer1.Panel2.Controls.Add(this.panel1);
+            this.splitContainer1.Size = new System.Drawing.Size(1269, 776);
+            this.splitContainer1.SplitterDistance = 735;
             this.splitContainer1.TabIndex = 0;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox1.Image = global::FASTFOOD_DNC.Properties.Resources.istockphoto_1154731746_612x6121;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(735, 776);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
+            // dgvGioHang
+            // 
+            this.dgvGioHang.AllowUserToAddRows = false;
+            this.dgvGioHang.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvGioHang.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvGioHang.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.colTenMon,
+            this.colSoLuong,
+            this.colThanhTien});
+            this.dgvGioHang.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvGioHang.Location = new System.Drawing.Point(0, 36);
+            this.dgvGioHang.Name = "dgvGioHang";
+            this.dgvGioHang.RowHeadersVisible = false;
+            this.dgvGioHang.RowHeadersWidth = 51;
+            this.dgvGioHang.RowTemplate.Height = 24;
+            this.dgvGioHang.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvGioHang.Size = new System.Drawing.Size(530, 620);
+            this.dgvGioHang.TabIndex = 2;
+            // 
+            // colTenMon
+            // 
+            this.colTenMon.DataPropertyName = "TenMon";
+            this.colTenMon.HeaderText = "Tên Món";
+            this.colTenMon.MinimumWidth = 6;
+            this.colTenMon.Name = "colTenMon";
+            // 
+            // colSoLuong
+            // 
+            this.colSoLuong.DataPropertyName = "SoLuong";
+            this.colSoLuong.FillWeight = 40F;
+            this.colSoLuong.HeaderText = "Số Lượng";
+            this.colSoLuong.MinimumWidth = 6;
+            this.colSoLuong.Name = "colSoLuong";
+            // 
+            // colThanhTien
+            // 
+            this.colThanhTien.DataPropertyName = "ThanhTien";
+            this.colThanhTien.FillWeight = 60F;
+            this.colThanhTien.HeaderText = "Thành Tiền";
+            this.colThanhTien.MinimumWidth = 6;
+            this.colThanhTien.Name = "colThanhTien";
+            // 
+            // label2
+            // 
+            this.label2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(0, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(530, 36);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "GIỎ HÀNG CỦA TÔI";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.btnXoaMon);
+            this.panel1.Controls.Add(this.btnDatHang);
+            this.panel1.Controls.Add(this.lblTongTien);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel1.Location = new System.Drawing.Point(0, 656);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(530, 120);
+            this.panel1.TabIndex = 0;
+            // 
+            // btnXoaMon
+            // 
+            this.btnXoaMon.Location = new System.Drawing.Point(380, 12);
+            this.btnXoaMon.Name = "btnXoaMon";
+            this.btnXoaMon.Size = new System.Drawing.Size(127, 46);
+            this.btnXoaMon.TabIndex = 3;
+            this.btnXoaMon.Text = "Xóa món";
+            this.btnXoaMon.UseVisualStyleBackColor = true;
+            // 
+            // btnDatHang
+            // 
+            this.btnDatHang.BackColor = System.Drawing.Color.Red;
+            this.btnDatHang.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.btnDatHang.ForeColor = System.Drawing.Color.Snow;
+            this.btnDatHang.Location = new System.Drawing.Point(0, 70);
+            this.btnDatHang.Name = "btnDatHang";
+            this.btnDatHang.Size = new System.Drawing.Size(530, 50);
+            this.btnDatHang.TabIndex = 2;
+            this.btnDatHang.Text = "ĐẶT HÀNG NGAY";
+            this.btnDatHang.UseVisualStyleBackColor = false;
+            // 
+            // lblTongTien
+            // 
+            this.lblTongTien.AutoSize = true;
+            this.lblTongTien.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTongTien.Location = new System.Drawing.Point(165, 18);
+            this.lblTongTien.Name = "lblTongTien";
+            this.lblTongTien.Size = new System.Drawing.Size(87, 29);
+            this.lblTongTien.TabIndex = 1;
+            this.lblTongTien.Text = "0 VNĐ";
             // 
             // label1
             // 
-            this.label1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(0, 0);
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(21, 18);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(529, 60);
+            this.label1.Size = new System.Drawing.Size(122, 25);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Lịch sử đơn hàng";
-            // 
-            // dgvLichSuDonHang
-            // 
-            this.dgvLichSuDonHang.AllowUserToAddRows = false;
-            this.dgvLichSuDonHang.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvLichSuDonHang.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.MaDonHang,
-            this.NgayDat,
-            this.TongTien,
-            this.TrangThai});
-            this.dgvLichSuDonHang.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvLichSuDonHang.Location = new System.Drawing.Point(0, 60);
-            this.dgvLichSuDonHang.Name = "dgvLichSuDonHang";
-            this.dgvLichSuDonHang.ReadOnly = true;
-            this.dgvLichSuDonHang.RowHeadersWidth = 51;
-            this.dgvLichSuDonHang.RowTemplate.Height = 24;
-            this.dgvLichSuDonHang.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvLichSuDonHang.Size = new System.Drawing.Size(529, 644);
-            this.dgvLichSuDonHang.TabIndex = 1;
-            // 
-            // MaDonHang
-            // 
-            this.MaDonHang.HeaderText = "Mã đơn hàng";
-            this.MaDonHang.MinimumWidth = 6;
-            this.MaDonHang.Name = "MaDonHang";
-            this.MaDonHang.ReadOnly = true;
-            this.MaDonHang.Width = 125;
-            // 
-            // NgayDat
-            // 
-            this.NgayDat.HeaderText = "Ngày đặt";
-            this.NgayDat.MinimumWidth = 6;
-            this.NgayDat.Name = "NgayDat";
-            this.NgayDat.ReadOnly = true;
-            this.NgayDat.Width = 125;
-            // 
-            // TongTien
-            // 
-            this.TongTien.HeaderText = "Tổng tiền";
-            this.TongTien.MinimumWidth = 6;
-            this.TongTien.Name = "TongTien";
-            this.TongTien.ReadOnly = true;
-            this.TongTien.Width = 125;
-            // 
-            // TrangThai
-            // 
-            this.TrangThai.HeaderText = "Trạng thái";
-            this.TrangThai.MinimumWidth = 6;
-            this.TrangThai.Name = "TrangThai";
-            this.TrangThai.ReadOnly = true;
-            this.TrangThai.Width = 125;
-            // 
-            // lblTieuDeChiTiet
-            // 
-            this.lblTieuDeChiTiet.AutoSize = true;
-            this.lblTieuDeChiTiet.Dock = System.Windows.Forms.DockStyle.Top;
-            this.lblTieuDeChiTiet.Location = new System.Drawing.Point(0, 0);
-            this.lblTieuDeChiTiet.Name = "lblTieuDeChiTiet";
-            this.lblTieuDeChiTiet.Size = new System.Drawing.Size(138, 20);
-            this.lblTieuDeChiTiet.TabIndex = 0;
-            this.lblTieuDeChiTiet.Text = "Chi tiết Đơn hàng";
+            this.label1.Text = "Tổng cộng:";
             // 
             // ucGIoHang
             // 
@@ -138,15 +191,17 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.splitContainer1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ucGIoHang";
-            this.Size = new System.Drawing.Size(1079, 704);
+            this.Size = new System.Drawing.Size(1269, 776);
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel2.ResumeLayout(false);
-            this.splitContainer1.Panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvLichSuDonHang)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvGioHang)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -154,12 +209,16 @@
         #endregion
 
         private System.Windows.Forms.SplitContainer splitContainer1;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label lblTongTien;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView dgvLichSuDonHang;
-        private System.Windows.Forms.DataGridViewTextBoxColumn MaDonHang;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NgayDat;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TongTien;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TrangThai;
-        private System.Windows.Forms.Label lblTieuDeChiTiet;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button btnDatHang;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button btnXoaMon;
+        private System.Windows.Forms.DataGridView dgvGioHang;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colTenMon;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colSoLuong;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colThanhTien;
     }
 }

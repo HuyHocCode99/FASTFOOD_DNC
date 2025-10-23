@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.label7 = new System.Windows.Forms.Label();
             this.btnXoa = new System.Windows.Forms.Button();
             this.btnLuu = new System.Windows.Forms.Button();
             this.btnThem = new System.Windows.Forms.Button();
@@ -45,7 +46,6 @@
             this.txtMaMonAn = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.dgvMenu = new System.Windows.Forms.DataGridView();
-            this.label7 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -83,9 +83,19 @@
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.dgvMenu);
-            this.splitContainer1.Size = new System.Drawing.Size(1265, 750);
-            this.splitContainer1.SplitterDistance = 642;
+            this.splitContainer1.Size = new System.Drawing.Size(1239, 733);
+            this.splitContainer1.SplitterDistance = 628;
             this.splitContainer1.TabIndex = 0;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(58, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(554, 46);
+            this.label7.TabIndex = 18;
+            this.label7.Text = "THÊM THÔNG TIN MÓN ĂN";
             // 
             // btnXoa
             // 
@@ -234,18 +244,8 @@
             this.dgvMenu.RowHeadersWidth = 51;
             this.dgvMenu.RowTemplate.Height = 24;
             this.dgvMenu.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvMenu.Size = new System.Drawing.Size(619, 750);
+            this.dgvMenu.Size = new System.Drawing.Size(607, 733);
             this.dgvMenu.TabIndex = 0;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(58, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(554, 46);
-            this.label7.TabIndex = 18;
-            this.label7.Text = "THÊM THÔNG TIN MÓN ĂN";
             // 
             // ucMenu
             // 
@@ -253,7 +253,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.splitContainer1);
             this.Name = "ucMenu";
-            this.Size = new System.Drawing.Size(1265, 750);
+            this.Size = new System.Drawing.Size(1239, 733);
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel1.PerformLayout();
             this.splitContainer1.Panel2.ResumeLayout(false);

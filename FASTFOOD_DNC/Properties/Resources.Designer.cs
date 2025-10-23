@@ -113,6 +113,16 @@ namespace FASTFOOD_DNC.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap istockphoto_1154731746_612x6121 {
+            get {
+                object obj = ResourceManager.GetObject("istockphoto-1154731746-612x6121", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap teacher_240_1128987 {
             get {
                 object obj = ResourceManager.GetObject("teacher-240-1128987", resourceCulture);
