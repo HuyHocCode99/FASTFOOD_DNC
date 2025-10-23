@@ -10,9 +10,13 @@ using System.Windows.Forms;
 
 namespace FASTFOOD_DNC
 {
-    public partial class KhachHang : Form
+    public partial class frmKhachHang : Form
     {
-        public KhachHang()
+        public frmKhachHang()
+        {
+            InitializeComponent();
+        }
+        public frmKhachHang(string v)
         {
             InitializeComponent();
         }
