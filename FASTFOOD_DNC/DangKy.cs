@@ -43,8 +43,15 @@ namespace FASTFOOD_DNC
                 return;
             }
 
-            
-            
+            if (txtMatKhau.Text != txtMatkhauXN.Text)
+            {
+                MessageBox.Show("Mật khẩu xác nhận không khớp! Vui lòng nhập lại.",
+                              "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtMatKhau.Clear();
+                txtMatkhauXN.Clear();
+                return;
+            }
+
 
             try
             {
@@ -74,10 +81,14 @@ namespace FASTFOOD_DNC
 
                     cmdKhachHang.ExecuteNonQuery();
 
-
-
-                    MessageBox.Show("Đăng ký tài khoản thành công!", "Thông báo",
+                    if (txtMatKhau.Text == txtMatkhauXN.Text)
+                    {
+                       MessageBox.Show("Đăng ký tài khoản thành công!", "Thông báo",
                                   MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        
+                    }
+
+                    
                     KiemTra = true;
                 }
                     
@@ -93,16 +104,6 @@ namespace FASTFOOD_DNC
             }
             catch (SqlException ex)
             {
-                
-                if(txtMatKhau.Text != txtMatkhauXN.Text)
-                {
-                    MessageBox.Show("Mật khẩu xác nhận không khớp! Vui lòng nhập lại.",
-                                  "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    txtMatKhau.Clear();
-                    txtMatkhauXN.Clear();
-                    return;
-                }
-
 
                 if (ex.Number == 2627 || ex.Number == 2601) // lỗi unique
 

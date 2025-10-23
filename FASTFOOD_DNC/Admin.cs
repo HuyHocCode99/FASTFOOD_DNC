@@ -16,7 +16,10 @@ namespace FASTFOOD_DNC
         {
             InitializeComponent();
         }
+        public frmAdmin(string v)
+        {
+            InitializeComponent();
+        }
 
-        
     }
 }
