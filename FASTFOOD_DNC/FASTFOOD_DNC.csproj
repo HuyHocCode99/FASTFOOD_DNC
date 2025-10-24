@@ -192,5 +192,14 @@
   <ItemGroup>
     <None Include="Resources\istockphoto-1154731746-612x6121.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Gemini_Generated_Image_5t53ly5t53ly5t53.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fast-food-burger-king-2-696x597.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
