@@ -34,13 +34,11 @@
             this.btnLuu = new System.Windows.Forms.Button();
             this.btnThem = new System.Windows.Forms.Button();
             this.picHinhAnh = new System.Windows.Forms.PictureBox();
-            this.cboLoaiMon = new System.Windows.Forms.ComboBox();
             this.numDonGia = new System.Windows.Forms.NumericUpDown();
             this.txtMoTa = new System.Windows.Forms.TextBox();
             this.txtTenMon = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.txtMaMonAn = new System.Windows.Forms.TextBox();
@@ -68,13 +66,11 @@
             this.splitContainer1.Panel1.Controls.Add(this.btnLuu);
             this.splitContainer1.Panel1.Controls.Add(this.btnThem);
             this.splitContainer1.Panel1.Controls.Add(this.picHinhAnh);
-            this.splitContainer1.Panel1.Controls.Add(this.cboLoaiMon);
             this.splitContainer1.Panel1.Controls.Add(this.numDonGia);
             this.splitContainer1.Panel1.Controls.Add(this.txtMoTa);
             this.splitContainer1.Panel1.Controls.Add(this.txtTenMon);
             this.splitContainer1.Panel1.Controls.Add(this.label6);
             this.splitContainer1.Panel1.Controls.Add(this.label5);
-            this.splitContainer1.Panel1.Controls.Add(this.label4);
             this.splitContainer1.Panel1.Controls.Add(this.label3);
             this.splitContainer1.Panel1.Controls.Add(this.label2);
             this.splitContainer1.Panel1.Controls.Add(this.txtMaMonAn);
@@ -127,19 +123,11 @@
             // picHinhAnh
             // 
             this.picHinhAnh.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.picHinhAnh.Location = new System.Drawing.Point(122, 265);
+            this.picHinhAnh.Location = new System.Drawing.Point(121, 228);
             this.picHinhAnh.Name = "picHinhAnh";
-            this.picHinhAnh.Size = new System.Drawing.Size(390, 227);
+            this.picHinhAnh.Size = new System.Drawing.Size(390, 260);
             this.picHinhAnh.TabIndex = 14;
             this.picHinhAnh.TabStop = false;
-            // 
-            // cboLoaiMon
-            // 
-            this.cboLoaiMon.FormattingEnabled = true;
-            this.cboLoaiMon.Location = new System.Drawing.Point(123, 220);
-            this.cboLoaiMon.Name = "cboLoaiMon";
-            this.cboLoaiMon.Size = new System.Drawing.Size(244, 24);
-            this.cboLoaiMon.TabIndex = 13;
             // 
             // numDonGia
             // 
@@ -178,21 +166,11 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(21, 265);
+            this.label5.Location = new System.Drawing.Point(23, 228);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(96, 25);
             this.label5.TabIndex = 5;
             this.label5.Text = "Hình ảnh:";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(23, 216);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(98, 25);
-            this.label4.TabIndex = 4;
-            this.label4.Text = "Loại món:";
             // 
             // label3
             // 
@@ -276,11 +254,9 @@
         private System.Windows.Forms.TextBox txtTenMon;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox picHinhAnh;
-        private System.Windows.Forms.ComboBox cboLoaiMon;
         private System.Windows.Forms.NumericUpDown numDonGia;
         private System.Windows.Forms.Button btnXoa;
         private System.Windows.Forms.Button btnLuu;
