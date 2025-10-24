@@ -1,6 +1,6 @@
 ﻿namespace FASTFOOD_DNC
 {
-    partial class KhachHang
+    partial class frmKhachHang
     {
         /// <summary>
         /// Required designer variable.
@@ -216,7 +216,7 @@
             this.lblPageTitleKH.Text = "label1";
             this.lblPageTitleKH.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // KhachHang
+            // frmKhachHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -225,7 +225,7 @@
             this.Controls.Add(this.pnlNavigationKH);
             this.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.Name = "KhachHang";
+            this.Name = "frmKhachHang";
             this.Text = "KhachHang";
             this.pnlNavigationKH.ResumeLayout(false);
             this.pnlNavigationKH.PerformLayout();
