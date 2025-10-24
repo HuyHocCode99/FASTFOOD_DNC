@@ -16,5 +16,9 @@ namespace FASTFOOD_DNC
         {
             InitializeComponent();
         }
+        public frmKhachHang(string v)
+        {
+            InitializeComponent();
+        }
     }
 }

@@ -19,7 +19,10 @@ namespace FASTFOOD_DNC
         {
             InitializeComponent();
         }
-
+        public frmDangKy(string v)
+        {
+            InitializeComponent();
+        }
         private void frmDangKy_Load(object sender, EventArgs e)
         {
             txtHovaTen.Enabled = true;
@@ -27,6 +30,7 @@ namespace FASTFOOD_DNC
 
         private void btnDangKy_Click(object sender, EventArgs e)
         {
+            Boolean KiemTra = false;
             
             if (string.IsNullOrWhiteSpace(txtHovaTen.Text) ||
                 string.IsNullOrWhiteSpace(txtDiachi.Text) ||
@@ -39,8 +43,15 @@ namespace FASTFOOD_DNC
                 return;
             }
 
-            
-            
+            if (txtMatKhau.Text != txtMatkhauXN.Text)
+            {
+                MessageBox.Show("Mật khẩu xác nhận không khớp! Vui lòng nhập lại.",
+                              "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtMatKhau.Clear();
+                txtMatkhauXN.Clear();
+                return;
+            }
+
 
             try
             {
@@ -70,25 +81,30 @@ namespace FASTFOOD_DNC
 
                     cmdKhachHang.ExecuteNonQuery();
 
-
-
-                    MessageBox.Show("Đăng ký tài khoản thành công!", "Thông báo",
+                    if (txtMatKhau.Text == txtMatkhauXN.Text)
+                    {
+                       MessageBox.Show("Đăng ký tài khoản thành công!", "Thông báo",
                                   MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        
+                    }
+
+                    
+                    KiemTra = true;
                 }
                     
                 
+                if(KiemTra == true)
+                {
+                    frmDangNhap frmDN = new frmDangNhap(txtTentaikhoan.Text.Trim());
+                    frmDN.Show();
+                    this.Hide();
+                }
 
                 
-                //frmDangNhap frmDN = new frmDangNhap(txtTentaikhoan.Text.Trim());
-                //frmDN.Show();
-                //this.Close();
             }
             catch (SqlException ex)
             {
-                
-                
 
-                
                 if (ex.Number == 2627 || ex.Number == 2601) // lỗi unique
 
                 {
@@ -124,6 +140,13 @@ namespace FASTFOOD_DNC
                 if (conn != null && conn.State == ConnectionState.Open)
                     conn.Close();
             }
+        }
+
+        private void linklblDangNhap_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            frmDangNhap frmDN = new frmDangNhap(txtTentaikhoan.Text.Trim());
+            frmDN.Show();
+            this.Hide();
         }
     }
 }
