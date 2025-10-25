@@ -1,20 +1,157 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Data.SqlClient;
 using System.Windows.Forms;
 
 namespace FASTFOOD_DNC
 {
     public partial class ucKhachHang : UserControl
     {
+        string connection = "Data Source=Huy\\SQLEXPRESS;Initial Catalog=FASTFOOD;Integrated Security=True";
+        // Bỏ biến SqlConnection conn = null; toàn cục không cần thiết
+
         public ucKhachHang()
         {
             InitializeComponent();
+        }
+
+        private void ucKhachHang_Load(object sender, EventArgs e)
+        {
+            LoadKhachHangData(); // Tải dữ liệu khách hàng khi UserControl load
+        }
+
+        // Hàm để tải dữ liệu khách hàng vào dgvKhachHang
+        private void LoadKhachHangData()
+        {
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(connection))
+                {
+                    // SỬA LỖI: Thêm MAKH vào câu truy vấn để có thể sử dụng khi chọn hàng
+                    string truyvan = "SELECT MAKH, TENKH, DIACHIKH, SODT FROM KHACHHANG";
+                    SqlDataAdapter adapter = new SqlDataAdapter(truyvan, conn); // Khởi tạo adapter trực tiếp với truy vấn và kết nối
+                    DataTable dtKhachHang = new DataTable();
+                    adapter.Fill(dtKhachHang);
+                    dgvKhachHang.DataSource = dtKhachHang;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi tải dữ liệu khách hàng: " + ex.Message, "Thông Báo!",
+                                 MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void dgvKhachHang_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow row = dgvKhachHang.Rows[e.RowIndex];
+
+                // Lấy MAKH từ hàng được chọn
+                string maKhachHang = row.Cells["MAKH"].Value.ToString();
+
+                // Đổ dữ liệu khách hàng lên các TextBox (nếu có txtMaKH thì đổ vào đó)
+                // txtMaKH.Text = maKhachHang; // Nếu bạn có một TextBox để hiển thị MAKH
+                txtTenKH.Text = row.Cells["TENKH"].Value.ToString();
+                txtDiaChi.Text = row.Cells["DIACHIKH"].Value.ToString();
+                txtSDT.Text = row.Cells["SODT"].Value.ToString();
+
+                // SỬA LỖI: Tải lịch sử đơn hàng của khách hàng được chọn
+                LoadLichSuDonHang(maKhachHang);
+            }
+        }
+
+        // Hàm mới để tải lịch sử đơn hàng của một khách hàng cụ thể
+        private void LoadLichSuDonHang(string maKhachHang)
+        {
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(connection))
+                {
+                    conn.Open();
+                    // SỬA LỖI: Join bảng và lọc theo MAKH cụ thể
+                    // Chỉ chọn các cột cần thiết để tránh trùng tên và hiển thị rõ ràng
+                    string truyvan = @"
+                        SELECT 
+                            DH.MADH, 
+                            DH.NGAYLAP, 
+                            DH.TONGTIEN, 
+                            -- Thêm các cột khác của DONHANG mà bạn muốn hiển thị
+                            KH.TENKH, KH.DIACHIKH, KH.SODT 
+                        FROM DONHANG DH
+                        INNER JOIN KHACHHANG KH ON DH.MAKH = KH.MAKH
+                        WHERE DH.MAKH = @maKhachHang"; // Lọc theo MAKH của khách hàng được chọn
+
+                    SqlCommand cmdHD = new SqlCommand(truyvan, conn);
+                    cmdHD.Parameters.AddWithValue("@maKhachHang", maKhachHang); // Truyền tham số MAKH
+                    SqlDataAdapter adapter = new SqlDataAdapter(cmdHD);
+                    DataTable dtHD = new DataTable();
+                    adapter.Fill(dtHD);
+                    dgvLichSuDon.DataSource = dtHD;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi tải lịch sử đơn hàng: " + ex.Message, "Thông Báo!",
+                                 MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btnTimKH_Click(object sender, EventArgs e)
+        {
+            // 1. Kiểm tra xem người dùng đã nhập tên để tìm chưa
+            if (string.IsNullOrWhiteSpace(txtTimKiemKH.Text))
+            {
+                MessageBox.Show("Vui lòng nhập tên khách hàng cần tìm!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            // Sử dụng 'using' để đảm bảo kết nối luôn được đóng, kể cả khi có lỗi
+            using (SqlConnection conn = new SqlConnection(connection))
+            {
+                // 2. Viết câu truy vấn có điều kiện WHERE và sử dụng tham số (@TenKH)
+                // Dùng LIKE để tìm kiếm gần đúng (ví dụ tìm "An" sẽ ra "Nguyễn Văn An")
+                string truyvan = "SELECT MAKH, TENKH, DIACHIKH, SODT FROM KHACHHANG WHERE TENKH LIKE @TenKH";
+
+                // Khởi tạo command
+                SqlCommand cmdtimKH = new SqlCommand(truyvan, conn);
+
+                // 3. Thêm tham số để tránh lỗi SQL Injection - Rất quan trọng!
+                // Thêm dấu % để tìm kiếm tương đối. Nếu muốn tìm chính xác, bỏ "%" đi.
+                cmdtimKH.Parameters.AddWithValue("@TenKH", "%" + txtTimKiemKH.Text + "%");
+
+                try
+                {
+                    conn.Open(); // Mở kết nối
+                    SqlDataReader reader = cmdtimKH.ExecuteReader();
+                    // 4. Kiểm tra xem có dữ liệu trả về không
+                    if (reader.Read()) // Chỉ cần đọc dòng đầu tiên tìm thấy
+                    {
+                        // 5. Hiển thị thông tin tìm được lên các ô textbox khác
+                        // Giả sử bạn có các textbox tên là txtMaKH, txtDiaChi, txtSoDT
+                        // Hãy thay đổi tên cho đúng với form của bạn
+                        
+                        txtTenKH.Text = reader["TENKH"].ToString(); // Có thể giữ lại tên đã tìm
+                        txtDiaChi.Text = reader["DIACHIKH"].ToString();
+                        txtSDT.Text = reader["SODT"].ToString();
+
+                        MessageBox.Show("Đã tìm thấy khách hàng.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    else
+                    {
+                        // Nếu không có dòng nào, thông báo không tìm thấy
+                        MessageBox.Show("Không tìm thấy khách hàng nào có tên phù hợp.", "Kết quả", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    }
+
+                    reader.Close(); // Đóng reader khi dùng xong
+                }
+                catch (Exception ex)
+                {
+                    // Báo lỗi nếu có sự cố khi kết nối hoặc thực thi
+                    MessageBox.Show("Lỗi khi tìm kiếm: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            } // Kết nối sẽ tự động đóng ở đây
         }
     }
 }
