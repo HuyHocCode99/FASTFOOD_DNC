@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -12,6 +13,9 @@ namespace FASTFOOD_DNC
 {
     public partial class frmKhachHang : Form
     {
+        string connection = "Data Source=Huy\\SQLEXPRESS;Initial Catalog=FASTFOOD;Integrated Security=True";
+        SqlConnection conn;
+        
         public frmKhachHang()
         {
             InitializeComponent();
@@ -19,6 +23,11 @@ namespace FASTFOOD_DNC
         public frmKhachHang(string v)
         {
             InitializeComponent();
+        }
+
+        private void frmKhachHang_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
