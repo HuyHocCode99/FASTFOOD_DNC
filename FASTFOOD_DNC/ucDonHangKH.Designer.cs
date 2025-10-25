@@ -29,22 +29,25 @@
         private void InitializeComponent()
         {
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.btnok = new System.Windows.Forms.Button();
+            this.txtTrangThai = new System.Windows.Forms.TextBox();
+            this.txtTongTien = new System.Windows.Forms.TextBox();
+            this.txtNgayDat = new System.Windows.Forms.TextBox();
+            this.txtMaDon = new System.Windows.Forms.TextBox();
             this.lblTrangThai = new System.Windows.Forms.Label();
             this.lblTongTien = new System.Windows.Forms.Label();
             this.lblNgayDat = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.txtMaDon = new System.Windows.Forms.TextBox();
-            this.txtNgayDat = new System.Windows.Forms.TextBox();
-            this.txtTongTien = new System.Windows.Forms.TextBox();
-            this.txtTrangThai = new System.Windows.Forms.TextBox();
-            this.btnok = new System.Windows.Forms.Button();
+            this.dgvMoAnDaDat = new System.Windows.Forms.DataGridView();
+            this.ColTenMonAn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colSoLuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colGiaTien = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvMoAnDaDat)).BeginInit();
             this.SuspendLayout();
             // 
             // splitContainer1
@@ -68,10 +71,53 @@
             // 
             // splitContainer1.Panel2
             // 
-            this.splitContainer1.Panel2.Controls.Add(this.pictureBox1);
+            this.splitContainer1.Panel2.Controls.Add(this.dgvMoAnDaDat);
             this.splitContainer1.Size = new System.Drawing.Size(989, 611);
             this.splitContainer1.SplitterDistance = 473;
             this.splitContainer1.TabIndex = 0;
+            // 
+            // btnok
+            // 
+            this.btnok.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.btnok.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnok.Location = new System.Drawing.Point(0, 526);
+            this.btnok.Name = "btnok";
+            this.btnok.Size = new System.Drawing.Size(473, 85);
+            this.btnok.TabIndex = 9;
+            this.btnok.Text = "OK";
+            this.btnok.UseVisualStyleBackColor = true;
+            // 
+            // txtTrangThai
+            // 
+            this.txtTrangThai.Location = new System.Drawing.Point(161, 388);
+            this.txtTrangThai.Name = "txtTrangThai";
+            this.txtTrangThai.ReadOnly = true;
+            this.txtTrangThai.Size = new System.Drawing.Size(310, 27);
+            this.txtTrangThai.TabIndex = 8;
+            // 
+            // txtTongTien
+            // 
+            this.txtTongTien.Location = new System.Drawing.Point(160, 307);
+            this.txtTongTien.Name = "txtTongTien";
+            this.txtTongTien.ReadOnly = true;
+            this.txtTongTien.Size = new System.Drawing.Size(310, 27);
+            this.txtTongTien.TabIndex = 7;
+            // 
+            // txtNgayDat
+            // 
+            this.txtNgayDat.Location = new System.Drawing.Point(160, 220);
+            this.txtNgayDat.Name = "txtNgayDat";
+            this.txtNgayDat.ReadOnly = true;
+            this.txtNgayDat.Size = new System.Drawing.Size(310, 27);
+            this.txtNgayDat.TabIndex = 6;
+            // 
+            // txtMaDon
+            // 
+            this.txtMaDon.Location = new System.Drawing.Point(160, 144);
+            this.txtMaDon.Name = "txtMaDon";
+            this.txtMaDon.ReadOnly = true;
+            this.txtMaDon.Size = new System.Drawing.Size(310, 27);
+            this.txtMaDon.TabIndex = 5;
             // 
             // lblTrangThai
             // 
@@ -124,59 +170,41 @@
             this.label1.Text = "ĐƠN HÀNG CỦA BẠN";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // pictureBox1
+            // dgvMoAnDaDat
             // 
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox1.Image = global::FASTFOOD_DNC.Properties.Resources.fast_food_burger_king_2_696x597;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(512, 611);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.dgvMoAnDaDat.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvMoAnDaDat.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ColTenMonAn,
+            this.colSoLuong,
+            this.colGiaTien});
+            this.dgvMoAnDaDat.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvMoAnDaDat.Location = new System.Drawing.Point(0, 0);
+            this.dgvMoAnDaDat.Name = "dgvMoAnDaDat";
+            this.dgvMoAnDaDat.RowHeadersWidth = 51;
+            this.dgvMoAnDaDat.RowTemplate.Height = 24;
+            this.dgvMoAnDaDat.Size = new System.Drawing.Size(512, 611);
+            this.dgvMoAnDaDat.TabIndex = 0;
             // 
-            // txtMaDon
+            // ColTenMonAn
             // 
-            this.txtMaDon.Location = new System.Drawing.Point(160, 144);
-            this.txtMaDon.Name = "txtMaDon";
-            this.txtMaDon.ReadOnly = true;
-            this.txtMaDon.Size = new System.Drawing.Size(310, 27);
-            this.txtMaDon.TabIndex = 5;
+            this.ColTenMonAn.HeaderText = "Tên món ăn";
+            this.ColTenMonAn.MinimumWidth = 6;
+            this.ColTenMonAn.Name = "ColTenMonAn";
+            this.ColTenMonAn.Width = 125;
             // 
-            // txtNgayDat
+            // colSoLuong
             // 
-            this.txtNgayDat.Location = new System.Drawing.Point(160, 220);
-            this.txtNgayDat.Name = "txtNgayDat";
-            this.txtNgayDat.ReadOnly = true;
-            this.txtNgayDat.Size = new System.Drawing.Size(310, 27);
-            this.txtNgayDat.TabIndex = 6;
+            this.colSoLuong.HeaderText = "Số lượng";
+            this.colSoLuong.MinimumWidth = 6;
+            this.colSoLuong.Name = "colSoLuong";
+            this.colSoLuong.Width = 125;
             // 
-            // txtTongTien
+            // colGiaTien
             // 
-            this.txtTongTien.Location = new System.Drawing.Point(160, 307);
-            this.txtTongTien.Name = "txtTongTien";
-            this.txtTongTien.ReadOnly = true;
-            this.txtTongTien.Size = new System.Drawing.Size(310, 27);
-            this.txtTongTien.TabIndex = 7;
-            // 
-            // txtTrangThai
-            // 
-            this.txtTrangThai.Location = new System.Drawing.Point(161, 388);
-            this.txtTrangThai.Name = "txtTrangThai";
-            this.txtTrangThai.ReadOnly = true;
-            this.txtTrangThai.Size = new System.Drawing.Size(310, 27);
-            this.txtTrangThai.TabIndex = 8;
-            // 
-            // btnok
-            // 
-            this.btnok.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.btnok.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnok.Location = new System.Drawing.Point(0, 526);
-            this.btnok.Name = "btnok";
-            this.btnok.Size = new System.Drawing.Size(473, 85);
-            this.btnok.TabIndex = 9;
-            this.btnok.Text = "OK";
-            this.btnok.UseVisualStyleBackColor = true;
+            this.colGiaTien.HeaderText = "Giá tiền";
+            this.colGiaTien.MinimumWidth = 6;
+            this.colGiaTien.Name = "colGiaTien";
+            this.colGiaTien.Width = 125;
             // 
             // ucDonHangKH
             // 
@@ -192,7 +220,7 @@
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvMoAnDaDat)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -201,7 +229,6 @@
 
         private System.Windows.Forms.SplitContainer splitContainer1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label lblTrangThai;
         private System.Windows.Forms.Label lblTongTien;
         private System.Windows.Forms.Label lblNgayDat;
@@ -211,5 +238,9 @@
         private System.Windows.Forms.TextBox txtNgayDat;
         private System.Windows.Forms.TextBox txtMaDon;
         private System.Windows.Forms.Button btnok;
+        private System.Windows.Forms.DataGridView dgvMoAnDaDat;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColTenMonAn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colSoLuong;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colGiaTien;
     }
 }

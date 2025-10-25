@@ -35,17 +35,17 @@
             this.btnDonHang = new System.Windows.Forms.Button();
             this.lblUserName = new System.Windows.Forms.Label();
             this.lblWelcome = new System.Windows.Forms.Label();
+            this.picLogo = new System.Windows.Forms.PictureBox();
             this.pnlHeader = new System.Windows.Forms.Panel();
+            this.picUserIcon = new System.Windows.Forms.PictureBox();
             this.lblCurrentUserInfo = new System.Windows.Forms.Label();
             this.lnkSignOut = new System.Windows.Forms.LinkLabel();
             this.lblPageTitle = new System.Windows.Forms.Label();
             this.pnlMainContent = new System.Windows.Forms.Panel();
-            this.picUserIcon = new System.Windows.Forms.PictureBox();
-            this.picLogo = new System.Windows.Forms.PictureBox();
             this.pnlNavigation.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picLogo)).BeginInit();
             this.pnlHeader.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picUserIcon)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picLogo)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlNavigation
@@ -150,6 +150,17 @@
             this.lblWelcome.Text = "Xin chào,";
             this.lblWelcome.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // picLogo
+            // 
+            this.picLogo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.picLogo.Image = global::FASTFOOD_DNC.Properties.Resources.Gemini_Generated_Image_5t53ly5t53ly5t53;
+            this.picLogo.Location = new System.Drawing.Point(0, 0);
+            this.picLogo.Name = "picLogo";
+            this.picLogo.Size = new System.Drawing.Size(230, 158);
+            this.picLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picLogo.TabIndex = 0;
+            this.picLogo.TabStop = false;
+            // 
             // pnlHeader
             // 
             this.pnlHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
@@ -162,6 +173,17 @@
             this.pnlHeader.Name = "pnlHeader";
             this.pnlHeader.Size = new System.Drawing.Size(997, 50);
             this.pnlHeader.TabIndex = 1;
+            // 
+            // picUserIcon
+            // 
+            this.picUserIcon.Dock = System.Windows.Forms.DockStyle.Right;
+            this.picUserIcon.Image = global::FASTFOOD_DNC.Properties.Resources.teacher_240_1128987;
+            this.picUserIcon.Location = new System.Drawing.Point(805, 0);
+            this.picUserIcon.Name = "picUserIcon";
+            this.picUserIcon.Size = new System.Drawing.Size(67, 50);
+            this.picUserIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picUserIcon.TabIndex = 3;
+            this.picUserIcon.TabStop = false;
             // 
             // lblCurrentUserInfo
             // 
@@ -210,28 +232,6 @@
             this.pnlMainContent.Size = new System.Drawing.Size(0, 698);
             this.pnlMainContent.TabIndex = 2;
             // 
-            // picUserIcon
-            // 
-            this.picUserIcon.Dock = System.Windows.Forms.DockStyle.Right;
-            this.picUserIcon.Image = global::FASTFOOD_DNC.Properties.Resources.teacher_240_1128987;
-            this.picUserIcon.Location = new System.Drawing.Point(805, 0);
-            this.picUserIcon.Name = "picUserIcon";
-            this.picUserIcon.Size = new System.Drawing.Size(67, 50);
-            this.picUserIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picUserIcon.TabIndex = 3;
-            this.picUserIcon.TabStop = false;
-            // 
-            // picLogo
-            // 
-            this.picLogo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.picLogo.Image = global::FASTFOOD_DNC.Properties.Resources.Gemini_Generated_Image_5t53ly5t53ly5t53;
-            this.picLogo.Location = new System.Drawing.Point(0, 0);
-            this.picLogo.Name = "picLogo";
-            this.picLogo.Size = new System.Drawing.Size(230, 158);
-            this.picLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picLogo.TabIndex = 0;
-            this.picLogo.TabStop = false;
-            // 
             // frmAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
@@ -248,10 +248,10 @@
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.pnlNavigation.ResumeLayout(false);
             this.pnlNavigation.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picLogo)).EndInit();
             this.pnlHeader.ResumeLayout(false);
             this.pnlHeader.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picUserIcon)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picLogo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
