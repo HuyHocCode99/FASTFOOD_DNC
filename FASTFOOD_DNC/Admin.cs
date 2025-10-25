@@ -61,6 +61,7 @@ namespace FASTFOOD_DNC
         private void frmAdmin_Load(object sender, EventArgs e)
         {
             lblPageTitle.Text = "FAST FOOD";
+            lblCurrentUserInfo.Text = "Admin!";
         }
     }
 }
