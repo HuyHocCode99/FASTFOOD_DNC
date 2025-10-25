@@ -29,31 +29,31 @@
         private void InitializeComponent()
         {
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.txtDonGiaMNKH = new System.Windows.Forms.TextBox();
-            this.txtTenMonMNKH = new System.Windows.Forms.TextBox();
+//            this.txtDonGiaMNKH = new System.Windows.Forms.TextBox();
+//            this.txtTenMonMNKH = new System.Windows.Forms.TextBox();
             this.lblThemVaoGioHang = new System.Windows.Forms.Label();
             this.lblDonGia = new System.Windows.Forms.Label();
             this.lblTenMon = new System.Windows.Forms.Label();
             this.picMonAn = new System.Windows.Forms.PictureBox();
-            this.pb = new System.Windows.Forms.PictureBox();
+//            this.pb = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picMonAn)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb)).BeginInit();
+//            ((System.ComponentModel.ISupportInitialize)(this.pb)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
             // 
-            this.label1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(0, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(701, 60);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "MENU";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+//            this.label1.Dock = System.Windows.Forms.DockStyle.Top;
+//            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+  //          this.label1.Location = new System.Drawing.Point(0, 0);
+  //          this.label1.Name = "label1";
+ //           this.label1.Size = new System.Drawing.Size(701, 60);
+  //          this.label1.TabIndex = 0;
+  //          this.label1.Text = "MENU";
+   //         this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // grbDanhMucMonAn
             // 
@@ -73,14 +73,14 @@
             // 
             // lblThemVaoGioHang
             // 
-            this.btnMon15.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMon15.ForeColor = System.Drawing.Color.LimeGreen;
-            this.btnMon15.Location = new System.Drawing.Point(484, 221);
-            this.btnMon15.Name = "btnMon15";
-            this.btnMon15.Size = new System.Drawing.Size(200, 81);
-            this.btnMon15.TabIndex = 6;
-            this.btnMon15.Text = "Sữa Lắc Sô Cô La";
-            this.btnMon15.UseVisualStyleBackColor = true;
+            //this.btnMon15.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            //this.btnMon15.ForeColor = System.Drawing.Color.LimeGreen;
+            //this.btnMon15.Location = new System.Drawing.Point(484, 221);
+            //this.btnMon15.Name = "btnMon15";
+            //this.btnMon15.Size = new System.Drawing.Size(200, 81);
+            //this.btnMon15.TabIndex = 6;
+            //this.btnMon15.Text = "Sữa Lắc Sô Cô La";
+            //this.btnMon15.UseVisualStyleBackColor = true;
             // 
             // btnMon12
             // 
@@ -106,14 +106,14 @@
             // 
             // btnMon4
             // 
-            this.btnMon4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMon4.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.btnMon4.Location = new System.Drawing.Point(25, 221);
-            this.btnMon4.Name = "btnMon4";
-            this.btnMon4.Size = new System.Drawing.Size(200, 81);
-            this.btnMon4.TabIndex = 3;
-            this.btnMon4.Text = "Gà Rán Giòn (3 Miếng)";
-            this.btnMon4.UseVisualStyleBackColor = true;
+            //this.btnMon4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            //this.btnMon4.ForeColor = System.Drawing.SystemColors.Highlight;
+            //this.btnMon4.Location = new System.Drawing.Point(25, 221);
+            //this.btnMon4.Name = "btnMon4";
+            //this.btnMon4.Size = new System.Drawing.Size(200, 81);
+            //this.btnMon4.TabIndex = 3;
+            //this.btnMon4.Text = "Gà Rán Giòn (3 Miếng)";
+            //this.btnMon4.UseVisualStyleBackColor = true;
             // 
             // pictureBox1
             // 
@@ -142,8 +142,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.grbDanhMucMonAn);
-            this.Controls.Add(this.label1);
+            //this.Controls.Add(this.grbDanhMucMonAn);
+            //this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ucMenuKH";
