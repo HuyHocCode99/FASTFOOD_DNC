@@ -12,9 +12,15 @@ namespace FASTFOOD_DNC
 {
     public partial class ucDonHang : UserControl
     {
+        string connection = "Data Source=Huy\\SQLEXPRESS;Initial Catalog=FASTFOOD;Integrated Security=True";
         public ucDonHang()
         {
             InitializeComponent();
+        }
+
+        private void ucDonHang_Load(object sender, EventArgs e)
+        {
+            
         }
     }
 }

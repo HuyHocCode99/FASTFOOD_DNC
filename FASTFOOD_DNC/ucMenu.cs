@@ -140,7 +140,6 @@ namespace FASTFOOD_DNC
                     cmd.Parameters.AddWithValue("@mamon", maMon);
 
                     cmd.ExecuteNonQuery();
-
                     MessageBox.Show("Cập nhật món ăn thành công!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                     // Reload the data to reflect changes
@@ -176,7 +175,7 @@ namespace FASTFOOD_DNC
                     // Reload the data to reflect changes
                     LoadMenuData();
                 }
-            
+                
         }
     }
 }
