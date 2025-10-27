@@ -753,6 +753,7 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(200, 100);
             this.panel1.TabIndex = 28;
+//            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // label4
             // 
@@ -907,6 +908,7 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ucMenuKH";
             this.Size = new System.Drawing.Size(682, 635);
+            this.Load += new System.EventHandler(this.ucMenuKH_Load);
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();

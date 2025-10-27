@@ -1,106 +1,115 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Data.SqlClient;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace FASTFOOD_DNC
 {
     public partial class frmKhachHang : Form
     {
-        string connection = "Data Source=Huy\\SQLEXPRESS;Initial Catalog=FASTFOOD;Integrated Security=True";
-        SqlConnection conn;
-        private string currentusername;
+        string connectionString = "Data Source=Huy\\SQLEXPRESS;Initial Catalog=FASTFOOD;Integrated Security=True";
+        private string currentUsername;
+
         public frmKhachHang()
         {
             InitializeComponent();
         }
-        public frmKhachHang(string v)
+
+        // Hàm khởi tạo này nhận tên đăng nhập từ form Login
+        public frmKhachHang(string username)
         {
             InitializeComponent();
-            this.currentusername = v;
+            this.currentUsername = username;
         }
 
         private void frmKhachHang_Load(object sender, EventArgs e)
         {
-            lblPageTitleKH.Text = "Menu";
-            pnMenuKH.Controls.Clear();
-            FASTFOOD_DNC.ucMenuKH menuControl = new FASTFOOD_DNC.ucMenuKH();
-            menuControl.Dock = DockStyle.Fill;
-            pnMenuKH.Controls.Add(menuControl);
-            try
-    {
-        using (SqlConnection conn = new SqlConnection(connection))
+            // Tải thông tin người dùng khi form được mở
+            LoadUserInfo();
+
+            // Hiển thị giao diện Menu mặc định
+            btnMenuKH.PerformClick();
+        }
+
+        // Tải thông tin người dùng (Tên Khách Hàng) để hiển thị
+        private void LoadUserInfo()
         {
-            conn.Open();
-            // --- Bước 1: Lấy MAKH từ TAIKHOAN ---
-            SqlCommand cmdTK = new SqlCommand("SELECT MAKH FROM TAIKHOAN WHERE TENDN = @TENDN", conn);
-            cmdTK.Parameters.AddWithValue("@TENDN", this.currentusername);
-
-            // FIX: Kiểm tra kết quả trước khi ép kiểu để tránh lỗi
-            object maKHResult = cmdTK.ExecuteScalar();
-
-            if (maKHResult != null && maKHResult != DBNull.Value)
+            // Nếu không có ai đăng nhập (currentUsername là null hoặc rỗng) thì không làm gì cả
+            if (string.IsNullOrEmpty(this.currentUsername))
             {
-                int maKH = Convert.ToInt32(maKHResult);
+                lblCurrentUserInfoKH.Text = "Khách vãng lai";
+                return;
+            }
 
-                // --- Bước 2: Lấy TENKH từ KHACHHANG ---
-                SqlCommand cmdKH = new SqlCommand("SELECT TENKH FROM KHACHHANG WHERE MAKH = @MAKH", conn);
-                cmdKH.Parameters.AddWithValue("@MAKH", maKH);
-
-                object tenKHResult = cmdKH.ExecuteScalar();
-
-                if (tenKHResult != null)
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(connectionString))
                 {
-                    // Hiển thị tên khách hàng lên label
-                    lblCurrentUserInfoKH.Text = "Xin chào, " + tenKHResult.ToString();
+                    conn.Open();
+
+                    // SỬA LỖI LOGIC: Truy vấn theo CSDL mới
+                    // Bước 1: Từ TENDN trong bảng TAIKHOAN, lấy ra MATK.
+                    SqlCommand cmdGetId = new SqlCommand("SELECT MATK FROM TAIKHOAN WHERE TENDN = @TENDN", conn);
+                    cmdGetId.Parameters.AddWithValue("@TENDN", this.currentUsername);
+
+                    // SỬA LỖI AN TOÀN: Kiểm tra kết quả trước khi dùng để tránh lỗi
+                    object matkResult = cmdGetId.ExecuteScalar();
+
+                    if (matkResult != null && matkResult != DBNull.Value)
+                    {
+                        int matk = Convert.ToInt32(matkResult);
+
+                        // Bước 2: Từ MATK, tìm TENKH trong bảng KHACHHANG.
+                        SqlCommand cmdGetName = new SqlCommand("SELECT TENKH FROM KHACHHANG WHERE MATK = @MATK", conn);
+                        cmdGetName.Parameters.AddWithValue("@MATK", matk);
+
+                        object tenKHResult = cmdGetName.ExecuteScalar();
+
+                        if (tenKHResult != null)
+                        {
+                            lblCurrentUserInfoKH.Text =tenKHResult.ToString();
+                        }
+                        else
+                        {
+                            // Trường hợp có tài khoản nhưng chưa có thông tin khách hàng
+                            lblCurrentUserInfoKH.Text = "Tài khoản chưa cập nhật thông tin";
+                        }
+                    }
+                    else
+                    {
+                        // Trường hợp đặc biệt (ví dụ: tài khoản admin không có trong bảng khách hàng)
+                        lblCurrentUserInfoKH.Text =this.currentUsername;
+                    }
                 }
             }
-            else
+            catch (Exception ex)
             {
-                // Xử lý trường hợp không tìm thấy tài khoản
-                lblCurrentUserInfoKH.Text = "Khách vãng lai";
-                MessageBox.Show("Không tìm thấy thông tin khách hàng cho tài khoản này.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Lỗi tải thông tin người dùng: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                lblCurrentUserInfoKH.Text = "Lỗi hiển thị";
             }
         }
-    }
-    catch (Exception ex)
-    {
-        MessageBox.Show("Đã xảy ra lỗi: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-    }
+
+        // CẢI TIẾN: Tạo một hàm dùng chung để tải User Control
+        private void LoadUserControl(UserControl userControl, string pageTitle)
+        {
+            lblPageTitleKH.Text = pageTitle;
+            pnMenuKH.Controls.Clear();
+            userControl.Dock = DockStyle.Fill;
+            pnMenuKH.Controls.Add(userControl);
         }
 
         private void btnMenuKH_Click(object sender, EventArgs e)
         {
-            lblPageTitleKH.Text = "Menu";
-            pnMenuKH.Controls.Clear();
-            FASTFOOD_DNC.ucMenuKH menuControl = new FASTFOOD_DNC.ucMenuKH();
-            menuControl.Dock = DockStyle.Fill;
-            pnMenuKH.Controls.Add(menuControl);
+            LoadUserControl(new ucMenuKH(), "Menu");
         }
 
         private void btnDonHangKH_Click(object sender, EventArgs e)
         {
-            lblPageTitleKH.Text = "Đơn Hàng";
-            pnMenuKH.Controls.Clear();
-            FASTFOOD_DNC.ucDonHangKH menuControl = new FASTFOOD_DNC.ucDonHangKH();
-            menuControl.Dock = DockStyle.Fill;
-            pnMenuKH.Controls.Add(menuControl);
+            LoadUserControl(new ucDonHangKH(), "Đơn Hàng");
         }
 
         private void btnGioHang_Click(object sender, EventArgs e)
         {
-            lblPageTitleKH.Text = "Giỏ Hàng";
-            pnMenuKH.Controls.Clear();
-            FASTFOOD_DNC.ucGIoHang menuControl = new FASTFOOD_DNC.ucGIoHang();
-            menuControl.Dock = DockStyle.Fill;
-            pnMenuKH.Controls.Add(menuControl);
+            LoadUserControl(new ucGIoHang(), "Giỏ Hàng");
         }
     }
 }
