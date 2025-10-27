@@ -62,7 +62,7 @@
             this.pnlNavigation.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlNavigation.Location = new System.Drawing.Point(0, 0);
             this.pnlNavigation.Name = "pnlNavigation";
-            this.pnlNavigation.Size = new System.Drawing.Size(230, 748);
+            this.pnlNavigation.Size = new System.Drawing.Size(230, 839);
             this.pnlNavigation.TabIndex = 0;
             // 
             // btnDangXuat
@@ -72,7 +72,7 @@
             this.btnDangXuat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDangXuat.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDangXuat.ForeColor = System.Drawing.Color.White;
-            this.btnDangXuat.Location = new System.Drawing.Point(0, 678);
+            this.btnDangXuat.Location = new System.Drawing.Point(0, 769);
             this.btnDangXuat.Name = "btnDangXuat";
             this.btnDangXuat.Size = new System.Drawing.Size(230, 70);
             this.btnDangXuat.TabIndex = 7;
@@ -88,7 +88,7 @@
             this.btnKhachHang.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnKhachHang.ForeColor = System.Drawing.Color.White;
             this.btnKhachHang.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnKhachHang.Location = new System.Drawing.Point(0, 422);
+            this.btnKhachHang.Location = new System.Drawing.Point(0, 412);
             this.btnKhachHang.Name = "btnKhachHang";
             this.btnKhachHang.Size = new System.Drawing.Size(230, 100);
             this.btnKhachHang.TabIndex = 6;
@@ -104,7 +104,7 @@
             this.btnMenu.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMenu.ForeColor = System.Drawing.Color.White;
             this.btnMenu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMenu.Location = new System.Drawing.Point(0, 322);
+            this.btnMenu.Location = new System.Drawing.Point(0, 312);
             this.btnMenu.Name = "btnMenu";
             this.btnMenu.Size = new System.Drawing.Size(230, 100);
             this.btnMenu.TabIndex = 5;
@@ -120,7 +120,7 @@
             this.btnDonHang.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDonHang.ForeColor = System.Drawing.Color.White;
             this.btnDonHang.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDonHang.Location = new System.Drawing.Point(0, 222);
+            this.btnDonHang.Location = new System.Drawing.Point(0, 212);
             this.btnDonHang.Name = "btnDonHang";
             this.btnDonHang.Size = new System.Drawing.Size(230, 100);
             this.btnDonHang.TabIndex = 4;
@@ -134,9 +134,9 @@
             this.lblUserName.Dock = System.Windows.Forms.DockStyle.Top;
             this.lblUserName.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUserName.ForeColor = System.Drawing.Color.White;
-            this.lblUserName.Location = new System.Drawing.Point(0, 195);
+            this.lblUserName.Location = new System.Drawing.Point(0, 190);
             this.lblUserName.Name = "lblUserName";
-            this.lblUserName.Size = new System.Drawing.Size(77, 27);
+            this.lblUserName.Size = new System.Drawing.Size(63, 22);
             this.lblUserName.TabIndex = 2;
             this.lblUserName.Text = "Admin";
             this.lblUserName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -150,7 +150,7 @@
             this.lblWelcome.Location = new System.Drawing.Point(0, 158);
             this.lblWelcome.Name = "lblWelcome";
             this.lblWelcome.Padding = new System.Windows.Forms.Padding(0, 10, 0, 0);
-            this.lblWelcome.Size = new System.Drawing.Size(105, 37);
+            this.lblWelcome.Size = new System.Drawing.Size(86, 32);
             this.lblWelcome.TabIndex = 1;
             this.lblWelcome.Text = "Xin chào,";
             this.lblWelcome.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -176,14 +176,14 @@
             this.pnlHeader.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlHeader.Location = new System.Drawing.Point(230, 0);
             this.pnlHeader.Name = "pnlHeader";
-            this.pnlHeader.Size = new System.Drawing.Size(997, 50);
+            this.pnlHeader.Size = new System.Drawing.Size(1288, 50);
             this.pnlHeader.TabIndex = 1;
             // 
             // picUserIcon
             // 
             this.picUserIcon.Dock = System.Windows.Forms.DockStyle.Right;
             this.picUserIcon.Image = global::FASTFOOD_DNC.Properties.Resources.teacher_240_1128987;
-            this.picUserIcon.Location = new System.Drawing.Point(776, 0);
+            this.picUserIcon.Location = new System.Drawing.Point(1096, 0);
             this.picUserIcon.Name = "picUserIcon";
             this.picUserIcon.Size = new System.Drawing.Size(67, 50);
             this.picUserIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -194,9 +194,9 @@
             // 
             this.lblCurrentUserInfo.AutoSize = true;
             this.lblCurrentUserInfo.Dock = System.Windows.Forms.DockStyle.Right;
-            this.lblCurrentUserInfo.Location = new System.Drawing.Point(843, 0);
+            this.lblCurrentUserInfo.Location = new System.Drawing.Point(1163, 0);
             this.lblCurrentUserInfo.Name = "lblCurrentUserInfo";
-            this.lblCurrentUserInfo.Size = new System.Drawing.Size(59, 29);
+            this.lblCurrentUserInfo.Size = new System.Drawing.Size(49, 24);
             this.lblCurrentUserInfo.TabIndex = 2;
             this.lblCurrentUserInfo.Text = "label1";
             this.lblCurrentUserInfo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -206,9 +206,9 @@
             // 
             this.lnkSignOut.AutoSize = true;
             this.lnkSignOut.Dock = System.Windows.Forms.DockStyle.Right;
-            this.lnkSignOut.Location = new System.Drawing.Point(902, 0);
+            this.lnkSignOut.Location = new System.Drawing.Point(1212, 0);
             this.lnkSignOut.Name = "lnkSignOut";
-            this.lnkSignOut.Size = new System.Drawing.Size(95, 23);
+            this.lnkSignOut.Size = new System.Drawing.Size(76, 19);
             this.lnkSignOut.TabIndex = 1;
             this.lnkSignOut.TabStop = true;
             this.lnkSignOut.Text = "Đăng xuất";
@@ -223,7 +223,7 @@
             this.lblPageTitle.Location = new System.Drawing.Point(0, 0);
             this.lblPageTitle.Name = "lblPageTitle";
             this.lblPageTitle.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            this.lblPageTitle.Size = new System.Drawing.Size(101, 32);
+            this.lblPageTitle.Size = new System.Drawing.Size(85, 25);
             this.lblPageTitle.TabIndex = 0;
             this.lblPageTitle.Text = "label1";
             this.lblPageTitle.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -233,9 +233,9 @@
             this.pnlMainContent.AutoSize = true;
             this.pnlMainContent.BackColor = System.Drawing.Color.White;
             this.pnlMainContent.Dock = System.Windows.Forms.DockStyle.Right;
-            this.pnlMainContent.Location = new System.Drawing.Point(1227, 50);
+            this.pnlMainContent.Location = new System.Drawing.Point(1518, 50);
             this.pnlMainContent.Name = "pnlMainContent";
-            this.pnlMainContent.Size = new System.Drawing.Size(0, 698);
+            this.pnlMainContent.Size = new System.Drawing.Size(0, 789);
             this.pnlMainContent.TabIndex = 2;
             // 
             // pnMenu
@@ -243,14 +243,14 @@
             this.pnMenu.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnMenu.Location = new System.Drawing.Point(230, 50);
             this.pnMenu.Name = "pnMenu";
-            this.pnMenu.Size = new System.Drawing.Size(997, 698);
+            this.pnMenu.Size = new System.Drawing.Size(1288, 789);
             this.pnMenu.TabIndex = 3;
             // 
             // frmAdmin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 22F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1227, 748);
+            this.ClientSize = new System.Drawing.Size(1518, 839);
             this.Controls.Add(this.pnMenu);
             this.Controls.Add(this.pnlMainContent);
             this.Controls.Add(this.pnlHeader);
