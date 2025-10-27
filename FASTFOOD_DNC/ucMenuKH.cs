@@ -17,6 +17,6 @@ namespace FASTFOOD_DNC
             InitializeComponent();
         }
 
-        
+       
     }
 }

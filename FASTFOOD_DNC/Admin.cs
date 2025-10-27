@@ -63,5 +63,19 @@ namespace FASTFOOD_DNC
             lblPageTitle.Text = "FAST FOOD";
             lblCurrentUserInfo.Text = "Admin!";
         }
+
+        private void btnDangXuat_Click(object sender, EventArgs e)
+        {
+            frmDangNhap frmDN = new frmDangNhap();
+            frmDN.Show();
+            this.Hide();
+        }
+
+        private void lnkSignOut_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            frmDangNhap frmDN = new frmDangNhap();
+            frmDN.Show();
+            this.Hide();
+        }
     }
 }

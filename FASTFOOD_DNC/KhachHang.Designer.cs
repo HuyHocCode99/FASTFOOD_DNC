@@ -93,6 +93,7 @@
             this.btnGioHang.TabIndex = 5;
             this.btnGioHang.Text = "Giỏ hàng";
             this.btnGioHang.UseVisualStyleBackColor = true;
+            this.btnGioHang.Click += new System.EventHandler(this.btnGioHang_Click);
             // 
             // btnDonHangKH
             // 
@@ -108,6 +109,7 @@
             this.btnDonHangKH.TabIndex = 4;
             this.btnDonHangKH.Text = "Đơn hàng";
             this.btnDonHangKH.UseVisualStyleBackColor = true;
+            this.btnDonHangKH.Click += new System.EventHandler(this.btnDonHangKH_Click);
             // 
             // btnMenuKH
             // 
@@ -123,6 +125,7 @@
             this.btnMenuKH.TabIndex = 3;
             this.btnMenuKH.Text = "Menu";
             this.btnMenuKH.UseVisualStyleBackColor = true;
+            this.btnMenuKH.Click += new System.EventHandler(this.btnMenuKH_Click);
             // 
             // label1
             // 
