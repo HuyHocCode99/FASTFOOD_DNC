@@ -100,24 +100,22 @@ namespace FASTFOOD_DNC
 
         private void btnTimKH_Click(object sender, EventArgs e)
         {
-            // 1. Kiểm tra xem người dùng đã nhập tên để tìm chưa
+            //Kiểm tra xem người dùng đã nhập tên để tìm chưa
             if (string.IsNullOrWhiteSpace(txtTimKiemKH.Text))
             {
                 MessageBox.Show("Vui lòng nhập tên khách hàng cần tìm!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
-            // Sử dụng 'using' để đảm bảo kết nối luôn được đóng, kể cả khi có lỗi
+            
             using (SqlConnection conn = new SqlConnection(connection))
             {
-                // 2. Viết câu truy vấn có điều kiện WHERE và sử dụng tham số (@TenKH)
-                // Dùng LIKE để tìm kiếm gần đúng (ví dụ tìm "An" sẽ ra "Nguyễn Văn An")
                 string truyvan = "SELECT MAKH, TENKH, DIACHIKH, SODT FROM KHACHHANG WHERE TENKH LIKE @TenKH";
 
                 // Khởi tạo command
                 SqlCommand cmdtimKH = new SqlCommand(truyvan, conn);
 
-                // 3. Thêm tham số để tránh lỗi SQL Injection - Rất quan trọng!
+                
                 // Thêm dấu % để tìm kiếm tương đối. Nếu muốn tìm chính xác, bỏ "%" đi.
                 cmdtimKH.Parameters.AddWithValue("@TenKH", "%" + txtTimKiemKH.Text + "%");
 
@@ -128,9 +126,8 @@ namespace FASTFOOD_DNC
                     // 4. Kiểm tra xem có dữ liệu trả về không
                     if (reader.Read()) // Chỉ cần đọc dòng đầu tiên tìm thấy
                     {
-                        // 5. Hiển thị thông tin tìm được lên các ô textbox khác
-                        // Giả sử bạn có các textbox tên là txtMaKH, txtDiaChi, txtSoDT
-                        // Hãy thay đổi tên cho đúng với form của bạn
+                       
+                        
                         
                         txtTenKH.Text = reader["TENKH"].ToString(); // Có thể giữ lại tên đã tìm
                         txtDiaChi.Text = reader["DIACHIKH"].ToString();
