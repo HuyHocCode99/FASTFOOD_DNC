@@ -90,7 +90,7 @@
             this.btnKhachHang.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnKhachHang.ForeColor = System.Drawing.Color.White;
             this.btnKhachHang.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnKhachHang.Location = new System.Drawing.Point(0, 412);
+            this.btnKhachHang.Location = new System.Drawing.Point(0, 422);
             this.btnKhachHang.Name = "btnKhachHang";
             this.btnKhachHang.Size = new System.Drawing.Size(230, 100);
             this.btnKhachHang.TabIndex = 6;
@@ -107,7 +107,7 @@
             this.btnMenu.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMenu.ForeColor = System.Drawing.Color.White;
             this.btnMenu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMenu.Location = new System.Drawing.Point(0, 312);
+            this.btnMenu.Location = new System.Drawing.Point(0, 322);
             this.btnMenu.Name = "btnMenu";
             this.btnMenu.Size = new System.Drawing.Size(230, 100);
             this.btnMenu.TabIndex = 5;
@@ -124,7 +124,7 @@
             this.btnDonHang.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDonHang.ForeColor = System.Drawing.Color.White;
             this.btnDonHang.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDonHang.Location = new System.Drawing.Point(0, 212);
+            this.btnDonHang.Location = new System.Drawing.Point(0, 222);
             this.btnDonHang.Name = "btnDonHang";
             this.btnDonHang.Size = new System.Drawing.Size(230, 100);
             this.btnDonHang.TabIndex = 4;
@@ -138,9 +138,9 @@
             this.lblUserName.Dock = System.Windows.Forms.DockStyle.Top;
             this.lblUserName.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUserName.ForeColor = System.Drawing.Color.White;
-            this.lblUserName.Location = new System.Drawing.Point(0, 190);
+            this.lblUserName.Location = new System.Drawing.Point(0, 195);
             this.lblUserName.Name = "lblUserName";
-            this.lblUserName.Size = new System.Drawing.Size(63, 22);
+            this.lblUserName.Size = new System.Drawing.Size(77, 27);
             this.lblUserName.TabIndex = 2;
             this.lblUserName.Text = "Admin";
             this.lblUserName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -154,7 +154,7 @@
             this.lblWelcome.Location = new System.Drawing.Point(0, 158);
             this.lblWelcome.Name = "lblWelcome";
             this.lblWelcome.Padding = new System.Windows.Forms.Padding(0, 10, 0, 0);
-            this.lblWelcome.Size = new System.Drawing.Size(86, 32);
+            this.lblWelcome.Size = new System.Drawing.Size(105, 37);
             this.lblWelcome.TabIndex = 1;
             this.lblWelcome.Text = "Xin chào,";
             this.lblWelcome.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -187,7 +187,7 @@
             // 
             this.picUserIcon.Dock = System.Windows.Forms.DockStyle.Right;
             this.picUserIcon.Image = global::FASTFOOD_DNC.Properties.Resources.teacher_240_1128987;
-            this.picUserIcon.Location = new System.Drawing.Point(1096, 0);
+            this.picUserIcon.Location = new System.Drawing.Point(1067, 0);
             this.picUserIcon.Name = "picUserIcon";
             this.picUserIcon.Size = new System.Drawing.Size(67, 50);
             this.picUserIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -198,9 +198,9 @@
             // 
             this.lblCurrentUserInfo.AutoSize = true;
             this.lblCurrentUserInfo.Dock = System.Windows.Forms.DockStyle.Right;
-            this.lblCurrentUserInfo.Location = new System.Drawing.Point(1163, 0);
+            this.lblCurrentUserInfo.Location = new System.Drawing.Point(1134, 0);
             this.lblCurrentUserInfo.Name = "lblCurrentUserInfo";
-            this.lblCurrentUserInfo.Size = new System.Drawing.Size(49, 24);
+            this.lblCurrentUserInfo.Size = new System.Drawing.Size(59, 29);
             this.lblCurrentUserInfo.TabIndex = 2;
             this.lblCurrentUserInfo.Text = "label1";
             this.lblCurrentUserInfo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -210,9 +210,9 @@
             // 
             this.lnkSignOut.AutoSize = true;
             this.lnkSignOut.Dock = System.Windows.Forms.DockStyle.Right;
-            this.lnkSignOut.Location = new System.Drawing.Point(1212, 0);
+            this.lnkSignOut.Location = new System.Drawing.Point(1193, 0);
             this.lnkSignOut.Name = "lnkSignOut";
-            this.lnkSignOut.Size = new System.Drawing.Size(76, 19);
+            this.lnkSignOut.Size = new System.Drawing.Size(95, 23);
             this.lnkSignOut.TabIndex = 1;
             this.lnkSignOut.TabStop = true;
             this.lnkSignOut.Text = "Đăng xuất";
@@ -227,7 +227,7 @@
             this.lblPageTitle.Location = new System.Drawing.Point(0, 0);
             this.lblPageTitle.Name = "lblPageTitle";
             this.lblPageTitle.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            this.lblPageTitle.Size = new System.Drawing.Size(85, 25);
+            this.lblPageTitle.Size = new System.Drawing.Size(101, 32);
             this.lblPageTitle.TabIndex = 0;
             this.lblPageTitle.Text = "label1";
             this.lblPageTitle.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -253,7 +253,7 @@
             // 
             // frmAdmin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1518, 839);
             this.Controls.Add(this.pnMenu);
