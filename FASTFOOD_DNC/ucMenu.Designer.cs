@@ -78,7 +78,7 @@
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.dgvMenu);
-            this.splitContainer1.Size = new System.Drawing.Size(1549, 703);
+            this.splitContainer1.Size = new System.Drawing.Size(1549, 671);
             this.splitContainer1.SplitterDistance = 601;
             this.splitContainer1.TabIndex = 0;
             // 
@@ -101,7 +101,7 @@
             this.btnXoa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnXoa.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold);
             this.btnXoa.ForeColor = System.Drawing.Color.White;
-            this.btnXoa.Location = new System.Drawing.Point(340, 629);
+            this.btnXoa.Location = new System.Drawing.Point(340, 597);
             this.btnXoa.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(140, 50);
@@ -118,7 +118,7 @@
             this.btnLuu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLuu.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold);
             this.btnLuu.ForeColor = System.Drawing.Color.White;
-            this.btnLuu.Location = new System.Drawing.Point(180, 629);
+            this.btnLuu.Location = new System.Drawing.Point(180, 597);
             this.btnLuu.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnLuu.Name = "btnLuu";
             this.btnLuu.Size = new System.Drawing.Size(140, 50);
@@ -135,7 +135,7 @@
             this.btnThem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnThem.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold);
             this.btnThem.ForeColor = System.Drawing.Color.White;
-            this.btnThem.Location = new System.Drawing.Point(20, 629);
+            this.btnThem.Location = new System.Drawing.Point(20, 597);
             this.btnThem.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(140, 50);
@@ -162,7 +162,7 @@
             this.txtMoTa.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtMoTa.Multiline = true;
             this.txtMoTa.Name = "txtMoTa";
-            this.txtMoTa.Size = new System.Drawing.Size(340, 314);
+            this.txtMoTa.Size = new System.Drawing.Size(340, 282);
             this.txtMoTa.TabIndex = 11;
             // 
             // txtTenMon
@@ -252,7 +252,7 @@
             this.dgvMenu.RowHeadersWidth = 51;
             this.dgvMenu.RowTemplate.Height = 24;
             this.dgvMenu.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvMenu.Size = new System.Drawing.Size(944, 703);
+            this.dgvMenu.Size = new System.Drawing.Size(944, 671);
             this.dgvMenu.TabIndex = 0;
             // 
             // ucMenu
@@ -264,7 +264,7 @@
             this.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "ucMenu";
-            this.Size = new System.Drawing.Size(1549, 703);
+            this.Size = new System.Drawing.Size(1549, 671);
             this.Load += new System.EventHandler(this.ucMenu_Load);
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel1.PerformLayout();
