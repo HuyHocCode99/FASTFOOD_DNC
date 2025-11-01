@@ -26,7 +26,7 @@ namespace FASTFOOD_DNC
         public void LoadMonAn()
         {
             // Xóa các món ăn cũ đi trước khi tải lại để tránh trùng lặp
-            panel1.Controls.Clear();
+            //panel1.Controls.Clear();
 
             try
             {
@@ -42,21 +42,21 @@ namespace FASTFOOD_DNC
                         while (reader.Read())
                         {
                             // 1. Tạo một UserControl con (ucMonAnItem) cho mỗi món ăn
-                            ucMonAnItem itemControl = new ucMonAnItem();
+                            //ucMonAnItem itemControl = new ucMonAnItem();
 
                             // 2. Gán dữ liệu từ CSDL vào các thuộc tính của itemControl
-                            itemControl.MaMon = Convert.ToInt32(reader["MAMON"]);
-                            itemControl.TenMon = reader["TENMON"].ToString();
-                            itemControl.DonGia = Convert.ToDecimal(reader["DONGIA"]);
+                            //itemControl.MaMon = Convert.ToInt32(reader["MAMON"]);
+                            //itemControl.TenMon = reader["TENMON"].ToString();
+                            //itemControl.DonGia = Convert.ToDecimal(reader["DONGIA"]);
                             // Giả sử bạn có thuộc tính HinhAnh trong ucMonAnItem
                             // itemControl.HinhAnh = reader["HINHANH"].ToString();
 
                             // 3. Đăng ký sự kiện: Khi nút "Thêm" trên itemControl được nhấn,
                             // thì phương thức 'ItemControl_ThemButtonClick' sẽ được gọi
-                            itemControl.ThemButtonClick += ItemControl_ThemButtonClick;
+                            //itemControl.ThemButtonClick += ItemControl_ThemButtonClick;
 
                             // 4. Thêm itemControl đã có dữ liệu vào FlowLayoutPanel
-                            panel1.Controls.Add(itemControl);
+                            //panel1.Controls.Add(itemControl);
                         }
                     }
                 }
