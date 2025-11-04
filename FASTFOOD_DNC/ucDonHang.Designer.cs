@@ -43,10 +43,8 @@
             this.btnHuyDon = new System.Windows.Forms.Button();
             this.btnHoanThanhDon = new System.Windows.Forms.Button();
             this.btnXacNhanDon = new System.Windows.Forms.Button();
-            this.txtGhiChu = new System.Windows.Forms.TextBox();
             this.txtTrangThaiHienTai = new System.Windows.Forms.TextBox();
             this.txtTongTien = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -142,10 +140,8 @@
             this.splitContainer1.Panel2.Controls.Add(this.btnHuyDon);
             this.splitContainer1.Panel2.Controls.Add(this.btnHoanThanhDon);
             this.splitContainer1.Panel2.Controls.Add(this.btnXacNhanDon);
-            this.splitContainer1.Panel2.Controls.Add(this.txtGhiChu);
             this.splitContainer1.Panel2.Controls.Add(this.txtTrangThaiHienTai);
             this.splitContainer1.Panel2.Controls.Add(this.txtTongTien);
-            this.splitContainer1.Panel2.Controls.Add(this.label7);
             this.splitContainer1.Panel2.Controls.Add(this.label6);
             this.splitContainer1.Panel2.Controls.Add(this.label5);
             this.splitContainer1.Panel2.Controls.Add(this.label4);
@@ -243,15 +239,6 @@
             this.btnXacNhanDon.Text = "Xác nhận (Đang giao)";
             this.btnXacNhanDon.UseVisualStyleBackColor = false;
             // 
-            // txtGhiChu
-            // 
-            this.txtGhiChu.Location = new System.Drawing.Point(183, 329);
-            this.txtGhiChu.Multiline = true;
-            this.txtGhiChu.Name = "txtGhiChu";
-            this.txtGhiChu.ReadOnly = true;
-            this.txtGhiChu.Size = new System.Drawing.Size(485, 242);
-            this.txtGhiChu.TabIndex = 9;
-            // 
             // txtTrangThaiHienTai
             // 
             this.txtTrangThaiHienTai.Location = new System.Drawing.Point(183, 273);
@@ -267,15 +254,6 @@
             this.txtTongTien.ReadOnly = true;
             this.txtTongTien.Size = new System.Drawing.Size(400, 30);
             this.txtTongTien.TabIndex = 7;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(58, 329);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(73, 23);
-            this.label7.TabIndex = 6;
-            this.label7.Text = "Ghi chú:";
             // 
             // label6
             // 
@@ -370,10 +348,8 @@
         private System.Windows.Forms.Button btnHuyDon;
         private System.Windows.Forms.Button btnHoanThanhDon;
         private System.Windows.Forms.Button btnXacNhanDon;
-        private System.Windows.Forms.TextBox txtGhiChu;
         private System.Windows.Forms.TextBox txtTrangThaiHienTai;
         private System.Windows.Forms.TextBox txtTongTien;
-        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label9;

@@ -63,6 +63,17 @@ namespace FASTFOOD_DNC.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _53400069_cáo_bảng_đen_fastfood___hamburger__khoai_tây_chiên_và_hotdog__vector_hình_minh_họa_ {
+            get {
+                object obj = ResourceManager.GetObject("53400069-cáo-bảng-đen-fastfood---hamburger,-khoai-tây-chiên-và-hotdog.-vector-hìn" +
+                        "h-minh-họa,", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap fast_food_burger_king_2_696x597 {
             get {
                 object obj = ResourceManager.GetObject("fast-food-burger-king-2-696x597", resourceCulture);
@@ -116,6 +127,26 @@ namespace FASTFOOD_DNC.Properties {
         internal static System.Drawing.Bitmap Gemini_Generated_Image_kanhhfkanhhfkanh {
             get {
                 object obj = ResourceManager.GetObject("Gemini_Generated_Image_kanhhfkanhhfkanh", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Gemini_Generated_Image_prefylprefylpref {
+            get {
+                object obj = ResourceManager.GetObject("Gemini_Generated_Image_prefylprefylpref", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap image_6 {
+            get {
+                object obj = ResourceManager.GetObject("image 6", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

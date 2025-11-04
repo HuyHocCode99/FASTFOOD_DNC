@@ -202,5 +202,14 @@
   <ItemGroup>
     <None Include="Resources\fast-food-burger-king-2-696x597.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image 6.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Gemini_Generated_Image_prefylprefylpref.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\53400069-cáo-bảng-đen-fastfood---hamburger,-khoai-tây-chiên-và-hotdog.-vector-hình-minh-họa,.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
