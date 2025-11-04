@@ -70,24 +70,29 @@ namespace FASTFOOD_DNC
                 using (SqlConnection conn = new SqlConnection(connection))
                 {
                     conn.Open();
-                    // SỬA LỖI: Join bảng và lọc theo MAKH cụ thể
-                    // Chỉ chọn các cột cần thiết để tránh trùng tên và hiển thị rõ ràng
+
+                    // SỬA LỖI: Dùng đúng tên cột (MADON, NGAYDAT) từ CSDL
                     string truyvan = @"
-                        SELECT 
-                            DH.MADH, 
-                            DH.NGAYLAP, 
-                            DH.TONGTIEN, 
-                            -- Thêm các cột khác của DONHANG mà bạn muốn hiển thị
-                            KH.TENKH, KH.DIACHIKH, KH.SODT 
-                        FROM DONHANG DH
-                        INNER JOIN KHACHHANG KH ON DH.MAKH = KH.MAKH
-                        WHERE DH.MAKH = @maKhachHang"; // Lọc theo MAKH của khách hàng được chọn
+                SELECT 
+                    DH.MADON, 
+                    DH.NGAYDAT, 
+                    DH.TONGTIEN, 
+                    DH.TRANGTHAI
+                    -- Bạn không cần join KHACHHANG ở đây nữa
+                    -- vì bạn chỉ cần hiển thị đơn hàng,
+                    -- thông tin khách hàng đã có ở dgvKhachHang
+                FROM DONHANG DH
+                WHERE DH.MAKH = @maKhachHang
+                ORDER BY DH.NGAYDAT DESC"; // Sắp xếp đơn mới lên đầu
 
                     SqlCommand cmdHD = new SqlCommand(truyvan, conn);
-                    cmdHD.Parameters.AddWithValue("@maKhachHang", maKhachHang); // Truyền tham số MAKH
+                    cmdHD.Parameters.AddWithValue("@maKhachHang", maKhachHang);
+
                     SqlDataAdapter adapter = new SqlDataAdapter(cmdHD);
                     DataTable dtHD = new DataTable();
                     adapter.Fill(dtHD);
+
+                    // Đảm bảo tên DataGridView là dgvLichSuDon (như code gốc của bạn)
                     dgvLichSuDon.DataSource = dtHD;
                 }
             }

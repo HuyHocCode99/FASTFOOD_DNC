@@ -80,7 +80,7 @@ namespace FASTFOOD_DNC
 
             if (!UserSession.IsLoggedIn())
             {
-                MessageBox.Show("Vui lòng đăng nhập để xem giỏ hàng.", "Thông báo");
+                MessageBox.Show("Vui lòng đăng nhập để Them", "Thông báo");
                 return;
             }
 

@@ -110,7 +110,7 @@ namespace FASTFOOD_DNC
         {
             if (!UserSession.IsLoggedIn())
             {
-                MessageBox.Show("Vui lòng đăng nhập để xem giỏ hàng.", "Thông báo");
+                MessageBox.Show("Vui lòng đăng nhập để Xoa.", "Thông báo");
                 return;
             }
             using (SqlConnection conn = new SqlConnection(connectionString))
@@ -148,7 +148,7 @@ namespace FASTFOOD_DNC
         {
             if (!UserSession.IsLoggedIn())
             {
-                MessageBox.Show("Vui lòng đăng nhập để xem giỏ hàng.", "Thông báo");
+                MessageBox.Show("Vui lòng đăng nhập để Dat hàng.", "Thông báo");
                 return;
             }
             using (SqlConnection conn = new SqlConnection(connectionString))
@@ -160,6 +160,7 @@ namespace FASTFOOD_DNC
                 using (SqlCommand cmdClear = new SqlCommand(clearCartQuery, conn))
                 {
                     cmdClear.Parameters.AddWithValue("@makh", maKhachHang);
+                    
                     int rowsAffected = cmdClear.ExecuteNonQuery();
                     if (rowsAffected > 0)
                     {
@@ -182,13 +183,16 @@ namespace FASTFOOD_DNC
                         cmdOrder.Parameters.AddWithValue("@tt", "Đã đặt");
                         cmdOrder.Parameters.AddWithValue("@ngaydat", DateTime.Now);
                         // Kiểm tra xem đặt thành công chưa
-
-                        int result = cmdOrder.ExecuteNonQuery();
-                        if (result > 0)
+                        if (dgvGioHang.RowCount > 0)
                         {
-                            MessageBox.Show("Đơn hàng đã được tạo thành công!", "Thông báo");
-                            return;
+                            int result = cmdOrder.ExecuteNonQuery();
+                            if (result > 0)
+                            {
+                                MessageBox.Show("Đơn hàng đã được tạo thành công!", "Thông báo");
+                                return;
+                            }
                         }
+                        
                     }
                         
                 }
