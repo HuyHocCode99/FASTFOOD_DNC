@@ -78,5 +78,14 @@ namespace FASTFOOD_DNC
             frmDN.Show();
             this.Hide();
         }
+
+        private void btnBaoCao_Click(object sender, EventArgs e)
+        {
+            lblPageTitle.Text = "Báo cáo";
+            pnMenu.Controls.Clear();
+            FASTFOOD_DNC.ucBaoCao menuControl = new FASTFOOD_DNC.ucBaoCao();
+            menuControl.Dock = DockStyle.Fill;
+            pnMenu.Controls.Add(menuControl);
+        }
     }
 }

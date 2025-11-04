@@ -43,6 +43,7 @@
             this.lblPageTitle = new System.Windows.Forms.Label();
             this.pnlMainContent = new System.Windows.Forms.Panel();
             this.pnMenu = new System.Windows.Forms.Panel();
+            this.btnBaoCao = new System.Windows.Forms.Button();
             this.pnlNavigation.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picLogo)).BeginInit();
             this.pnlHeader.SuspendLayout();
@@ -52,6 +53,7 @@
             // pnlNavigation
             // 
             this.pnlNavigation.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(52)))), ((int)(((byte)(54)))));
+            this.pnlNavigation.Controls.Add(this.btnBaoCao);
             this.pnlNavigation.Controls.Add(this.btnDangXuat);
             this.pnlNavigation.Controls.Add(this.btnKhachHang);
             this.pnlNavigation.Controls.Add(this.btnMenu);
@@ -251,6 +253,23 @@
             this.pnMenu.Size = new System.Drawing.Size(1288, 789);
             this.pnMenu.TabIndex = 3;
             // 
+            // btnBaoCao
+            // 
+            this.btnBaoCao.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnBaoCao.FlatAppearance.BorderSize = 0;
+            this.btnBaoCao.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(116)))), ((int)(((byte)(217)))));
+            this.btnBaoCao.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBaoCao.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBaoCao.ForeColor = System.Drawing.Color.White;
+            this.btnBaoCao.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnBaoCao.Location = new System.Drawing.Point(0, 541);
+            this.btnBaoCao.Name = "btnBaoCao";
+            this.btnBaoCao.Size = new System.Drawing.Size(230, 100);
+            this.btnBaoCao.TabIndex = 8;
+            this.btnBaoCao.Text = "Báo cáo";
+            this.btnBaoCao.UseVisualStyleBackColor = true;
+            this.btnBaoCao.Click += new System.EventHandler(this.btnBaoCao_Click);
+            // 
             // frmAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
@@ -295,5 +314,6 @@
         private System.Windows.Forms.Button btnDangXuat;
         private System.Windows.Forms.Label lblUserName;
         private System.Windows.Forms.Panel pnMenu;
+        private System.Windows.Forms.Button btnBaoCao;
     }
 }
