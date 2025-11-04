@@ -63,6 +63,14 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DangNhap.resx</DependentUpon>
     </Compile>
+    <Compile Include="dsDonHang.cs">
+      <DependentUpon>dsDonHang.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dsDonHang.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsDonHang.xsd</DependentUpon>
+    </Compile>
     <Compile Include="ucBaoCao.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -160,6 +168,17 @@
     <EmbeddedResource Include="ucMenuKH.resx">
       <DependentUpon>ucMenuKH.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="dsDonHang.xsc">
+      <DependentUpon>dsDonHang.xsd</DependentUpon>
+    </None>
+    <None Include="dsDonHang.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsDonHang.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="dsDonHang.xss">
+      <DependentUpon>dsDonHang.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

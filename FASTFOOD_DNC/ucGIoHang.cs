@@ -28,6 +28,11 @@ namespace FASTFOOD_DNC
         // Viết Hàm Load Giỏ Hàng
         public void LoadGioHang()
         {
+            if (!UserSession.IsLoggedIn())
+            {
+                MessageBox.Show("Vui lòng đăng nhập để xem giỏ hàng.", "Thông báo");
+                return;
+            }
 
             // Lấy MAKH từ session
             int maKhachHang = UserSession.MaKhachHang;
@@ -103,7 +108,12 @@ namespace FASTFOOD_DNC
 
         private void btnXoaMon_Click(object sender, EventArgs e)
         {
-            using(SqlConnection conn = new SqlConnection(connectionString))
+            if (!UserSession.IsLoggedIn())
+            {
+                MessageBox.Show("Vui lòng đăng nhập để Xoa.", "Thông báo");
+                return;
+            }
+            using (SqlConnection conn = new SqlConnection(connectionString))
             {
                 conn.Open();
                 // Lấy MAGIOHANG từ dòng được chọn
@@ -136,6 +146,11 @@ namespace FASTFOOD_DNC
 
         private void btnDatHang_Click(object sender, EventArgs e)
         {
+            if (!UserSession.IsLoggedIn())
+            {
+                MessageBox.Show("Vui lòng đăng nhập để Dat hàng.", "Thông báo");
+                return;
+            }
             using (SqlConnection conn = new SqlConnection(connectionString))
             {
                 conn.Open();
@@ -145,6 +160,7 @@ namespace FASTFOOD_DNC
                 using (SqlCommand cmdClear = new SqlCommand(clearCartQuery, conn))
                 {
                     cmdClear.Parameters.AddWithValue("@makh", maKhachHang);
+                    
                     int rowsAffected = cmdClear.ExecuteNonQuery();
                     if (rowsAffected > 0)
                     {
@@ -167,13 +183,16 @@ namespace FASTFOOD_DNC
                         cmdOrder.Parameters.AddWithValue("@tt", "Đã đặt");
                         cmdOrder.Parameters.AddWithValue("@ngaydat", DateTime.Now);
                         // Kiểm tra xem đặt thành công chưa
-
-                        int result = cmdOrder.ExecuteNonQuery();
-                        if (result > 0)
+                        if (dgvGioHang.RowCount > 0)
                         {
-                            MessageBox.Show("Đơn hàng đã được tạo thành công!", "Thông báo");
-                            return;
+                            int result = cmdOrder.ExecuteNonQuery();
+                            if (result > 0)
+                            {
+                                MessageBox.Show("Đơn hàng đã được tạo thành công!", "Thông báo");
+                                return;
+                            }
                         }
+                        
                     }
                         
                 }

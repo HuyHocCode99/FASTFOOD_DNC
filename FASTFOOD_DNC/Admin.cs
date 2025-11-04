@@ -73,6 +73,7 @@ namespace FASTFOOD_DNC
 
         private void lnkSignOut_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
+            UserSession.Logout();
             frmDangNhap frmDN = new frmDangNhap();
             frmDN.Show();
             this.Hide();
