@@ -35,17 +35,17 @@
             this.btnMenuKH = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.lblWelcomeKH = new System.Windows.Forms.Label();
+            this.picLogoKH = new System.Windows.Forms.PictureBox();
             this.pnlHeaderKH = new System.Windows.Forms.Panel();
+            this.picUserIconKH = new System.Windows.Forms.PictureBox();
             this.lblCurrentUserInfoKH = new System.Windows.Forms.Label();
             this.lnkSignOutKH = new System.Windows.Forms.LinkLabel();
             this.lblPageTitleKH = new System.Windows.Forms.Label();
             this.pnMenuKH = new System.Windows.Forms.Panel();
-            this.picUserIconKH = new System.Windows.Forms.PictureBox();
-            this.picLogoKH = new System.Windows.Forms.PictureBox();
             this.pnlNavigationKH.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picLogoKH)).BeginInit();
             this.pnlHeaderKH.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picUserIconKH)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picLogoKH)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlNavigationKH
@@ -158,6 +158,17 @@
             this.lblWelcomeKH.Text = "Xin chào,";
             this.lblWelcomeKH.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // picLogoKH
+            // 
+            this.picLogoKH.Dock = System.Windows.Forms.DockStyle.Top;
+            this.picLogoKH.Image = global::FASTFOOD_DNC.Properties.Resources._53400069_cáo_bảng_đen_fastfood___hamburger__khoai_tây_chiên_và_hotdog__vector_hình_minh_họa_;
+            this.picLogoKH.Location = new System.Drawing.Point(0, 0);
+            this.picLogoKH.Name = "picLogoKH";
+            this.picLogoKH.Size = new System.Drawing.Size(230, 183);
+            this.picLogoKH.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picLogoKH.TabIndex = 0;
+            this.picLogoKH.TabStop = false;
+            // 
             // pnlHeaderKH
             // 
             this.pnlHeaderKH.BackColor = System.Drawing.Color.White;
@@ -170,6 +181,17 @@
             this.pnlHeaderKH.Name = "pnlHeaderKH";
             this.pnlHeaderKH.Size = new System.Drawing.Size(1372, 50);
             this.pnlHeaderKH.TabIndex = 2;
+            // 
+            // picUserIconKH
+            // 
+            this.picUserIconKH.Dock = System.Windows.Forms.DockStyle.Right;
+            this.picUserIconKH.Image = global::FASTFOOD_DNC.Properties.Resources.teacher_240_1128987;
+            this.picUserIconKH.Location = new System.Drawing.Point(1157, 0);
+            this.picUserIconKH.Name = "picUserIconKH";
+            this.picUserIconKH.Size = new System.Drawing.Size(71, 50);
+            this.picUserIconKH.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picUserIconKH.TabIndex = 3;
+            this.picUserIconKH.TabStop = false;
             // 
             // lblCurrentUserInfoKH
             // 
@@ -215,28 +237,6 @@
             this.pnMenuKH.Size = new System.Drawing.Size(1372, 803);
             this.pnMenuKH.TabIndex = 3;
             // 
-            // picUserIconKH
-            // 
-            this.picUserIconKH.Dock = System.Windows.Forms.DockStyle.Right;
-            this.picUserIconKH.Image = global::FASTFOOD_DNC.Properties.Resources.teacher_240_1128987;
-            this.picUserIconKH.Location = new System.Drawing.Point(1157, 0);
-            this.picUserIconKH.Name = "picUserIconKH";
-            this.picUserIconKH.Size = new System.Drawing.Size(71, 50);
-            this.picUserIconKH.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picUserIconKH.TabIndex = 3;
-            this.picUserIconKH.TabStop = false;
-            // 
-            // picLogoKH
-            // 
-            this.picLogoKH.Dock = System.Windows.Forms.DockStyle.Top;
-            this.picLogoKH.Image = global::FASTFOOD_DNC.Properties.Resources._53400069_cáo_bảng_đen_fastfood___hamburger__khoai_tây_chiên_và_hotdog__vector_hình_minh_họa_;
-            this.picLogoKH.Location = new System.Drawing.Point(0, 0);
-            this.picLogoKH.Name = "picLogoKH";
-            this.picLogoKH.Size = new System.Drawing.Size(230, 183);
-            this.picLogoKH.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picLogoKH.TabIndex = 0;
-            this.picLogoKH.TabStop = false;
-            // 
             // frmKhachHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 23F);
@@ -253,10 +253,10 @@
             this.Load += new System.EventHandler(this.frmKhachHang_Load);
             this.pnlNavigationKH.ResumeLayout(false);
             this.pnlNavigationKH.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picLogoKH)).EndInit();
             this.pnlHeaderKH.ResumeLayout(false);
             this.pnlHeaderKH.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picUserIconKH)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picLogoKH)).EndInit();
             this.ResumeLayout(false);
 
         }

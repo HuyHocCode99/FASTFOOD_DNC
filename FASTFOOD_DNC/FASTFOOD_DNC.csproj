@@ -63,6 +63,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DangNhap.resx</DependentUpon>
     </Compile>
+    <Compile Include="ucBaoCao.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucBaoCao.Designer.cs">
+      <DependentUpon>ucBaoCao.cs</DependentUpon>
+    </Compile>
     <Compile Include="ucDonHangKH.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -122,6 +128,9 @@
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>DangNhap1.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucBaoCao.resx">
+      <DependentUpon>ucBaoCao.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ucDonHangKH.resx">
       <DependentUpon>ucDonHangKH.cs</DependentUpon>
