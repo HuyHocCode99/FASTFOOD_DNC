@@ -111,5 +111,21 @@ namespace FASTFOOD_DNC
         {
             LoadUserControl(new ucGIoHang(), "Giỏ Hàng");
         }
+
+        private void btnDangXuatKH_Click(object sender, EventArgs e)
+        {
+            UserSession.Logout();
+            frmDangNhap frmDN = new frmDangNhap();
+            frmDN.Show();
+            this.Hide();
+        }
+
+        private void lnkSignOutKH_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            UserSession.Logout();
+            frmDangNhap frmDN = new frmDangNhap();
+            frmDN.Show();
+            this.Hide();
+        }
     }
 }

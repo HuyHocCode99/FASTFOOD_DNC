@@ -79,6 +79,7 @@
             this.btnDangXuatKH.TabIndex = 6;
             this.btnDangXuatKH.Text = "Đăng xuất";
             this.btnDangXuatKH.UseVisualStyleBackColor = true;
+            this.btnDangXuatKH.Click += new System.EventHandler(this.btnDangXuatKH_Click);
             // 
             // btnGioHang
             // 
@@ -215,6 +216,7 @@
             this.lnkSignOutKH.TabIndex = 1;
             this.lnkSignOutKH.TabStop = true;
             this.lnkSignOutKH.Text = "Đăng xuất";
+            this.lnkSignOutKH.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnkSignOutKH_LinkClicked);
             // 
             // lblPageTitleKH
             // 

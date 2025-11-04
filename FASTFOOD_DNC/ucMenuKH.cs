@@ -26,8 +26,7 @@ namespace FASTFOOD_DNC
         }
         public void LoadMonAn()
         {
-            // Xóa các món ăn cũ đi trước khi tải lại để tránh trùng lặp
-            //panel1.Controls.Clear();
+           
 
             try
             {
@@ -78,8 +77,12 @@ namespace FASTFOOD_DNC
 
         private void btnThem_Click(object sender, EventArgs e)
         {
-           
-            
+
+            if (!UserSession.IsLoggedIn())
+            {
+                MessageBox.Show("Vui lòng đăng nhập để xem giỏ hàng.", "Thông báo");
+                return;
+            }
 
             //Kiểm tra xem người dùng đã chọn món ăn chưa
             if (string.IsNullOrWhiteSpace(txtMaMon.Text))
