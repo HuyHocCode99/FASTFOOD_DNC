@@ -65,8 +65,6 @@ namespace FASTFOOD_DNC
                     SqlCommand cmdTaiKhoan = new SqlCommand(insertTaiKhoan, conn);
                     cmdTaiKhoan.Parameters.AddWithValue("@TenDN", txtTentaikhoan.Text.Trim());
                     cmdTaiKhoan.Parameters.AddWithValue("@MatKhau", txtMatKhau.Text);
-
-
                     int maTK = (int)cmdTaiKhoan.ExecuteScalar();
 
 

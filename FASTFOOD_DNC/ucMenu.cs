@@ -177,5 +177,24 @@ namespace FASTFOOD_DNC
                 }
                 
         }
+
+        private void dgvMenu_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0) // Kiểm tra này là đúng
+            {
+                DataGridViewRow row = dgvMenu.Rows[e.RowIndex];
+
+                // Tên cột (MAMON, TENMON, DONGIA, MOTA) 
+                // phải khớp với tên trong câu query VÀ DataPropertyName
+
+                txtMaMonAn.Text = row.Cells["MAMON"].Value.ToString();
+                txtTenMon.Text = row.Cells["TENMON"].Value.ToString();
+                txtMoTa.Text = row.Cells["MOTA"].Value == DBNull.Value
+                    ? "" : row.Cells["MOTA"].Value.ToString();
+                numDonGia.Value = row.Cells["DONGIA"].Value == DBNull.Value
+                                  ? 0
+                                  : Convert.ToDecimal(row.Cells["DONGIA"].Value);
+            }
+        }
     }
 }
