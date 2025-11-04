@@ -89,7 +89,7 @@
             this.btnGioHang.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGioHang.ForeColor = System.Drawing.Color.White;
             this.btnGioHang.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGioHang.Location = new System.Drawing.Point(0, 414);
+            this.btnGioHang.Location = new System.Drawing.Point(0, 422);
             this.btnGioHang.Name = "btnGioHang";
             this.btnGioHang.Size = new System.Drawing.Size(230, 100);
             this.btnGioHang.TabIndex = 5;
@@ -106,7 +106,7 @@
             this.btnDonHangKH.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDonHangKH.ForeColor = System.Drawing.Color.White;
             this.btnDonHangKH.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDonHangKH.Location = new System.Drawing.Point(0, 314);
+            this.btnDonHangKH.Location = new System.Drawing.Point(0, 322);
             this.btnDonHangKH.Name = "btnDonHangKH";
             this.btnDonHangKH.Size = new System.Drawing.Size(230, 100);
             this.btnDonHangKH.TabIndex = 4;
@@ -123,7 +123,7 @@
             this.btnMenuKH.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMenuKH.ForeColor = System.Drawing.Color.White;
             this.btnMenuKH.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMenuKH.Location = new System.Drawing.Point(0, 214);
+            this.btnMenuKH.Location = new System.Drawing.Point(0, 222);
             this.btnMenuKH.Name = "btnMenuKH";
             this.btnMenuKH.Size = new System.Drawing.Size(230, 100);
             this.btnMenuKH.TabIndex = 3;
@@ -137,9 +137,9 @@
             this.label1.Dock = System.Windows.Forms.DockStyle.Top;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(0, 186);
+            this.label1.Location = new System.Drawing.Point(0, 190);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(114, 28);
+            this.label1.Size = new System.Drawing.Size(140, 32);
             this.label1.TabIndex = 2;
             this.label1.Text = "Khách hàng";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -153,7 +153,7 @@
             this.lblWelcomeKH.Location = new System.Drawing.Point(0, 148);
             this.lblWelcomeKH.Name = "lblWelcomeKH";
             this.lblWelcomeKH.Padding = new System.Windows.Forms.Padding(0, 10, 0, 0);
-            this.lblWelcomeKH.Size = new System.Drawing.Size(91, 38);
+            this.lblWelcomeKH.Size = new System.Drawing.Size(111, 42);
             this.lblWelcomeKH.TabIndex = 1;
             this.lblWelcomeKH.Text = "Xin chào,";
             this.lblWelcomeKH.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -186,7 +186,7 @@
             // 
             this.picUserIconKH.Dock = System.Windows.Forms.DockStyle.Right;
             this.picUserIconKH.Image = global::FASTFOOD_DNC.Properties.Resources.teacher_240_1128987;
-            this.picUserIconKH.Location = new System.Drawing.Point(1157, 0);
+            this.picUserIconKH.Location = new System.Drawing.Point(1124, 0);
             this.picUserIconKH.Name = "picUserIconKH";
             this.picUserIconKH.Size = new System.Drawing.Size(71, 50);
             this.picUserIconKH.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -198,9 +198,9 @@
             this.lblCurrentUserInfoKH.AutoSize = true;
             this.lblCurrentUserInfoKH.Dock = System.Windows.Forms.DockStyle.Right;
             this.lblCurrentUserInfoKH.Font = new System.Drawing.Font("Segoe UI", 10.2F);
-            this.lblCurrentUserInfoKH.Location = new System.Drawing.Point(1228, 0);
+            this.lblCurrentUserInfoKH.Location = new System.Drawing.Point(1195, 0);
             this.lblCurrentUserInfoKH.Name = "lblCurrentUserInfoKH";
-            this.lblCurrentUserInfoKH.Size = new System.Drawing.Size(55, 23);
+            this.lblCurrentUserInfoKH.Size = new System.Drawing.Size(68, 30);
             this.lblCurrentUserInfoKH.TabIndex = 2;
             this.lblCurrentUserInfoKH.Text = "label1";
             // 
@@ -209,9 +209,9 @@
             this.lnkSignOutKH.AutoSize = true;
             this.lnkSignOutKH.Dock = System.Windows.Forms.DockStyle.Right;
             this.lnkSignOutKH.Font = new System.Drawing.Font("Segoe UI", 10.2F);
-            this.lnkSignOutKH.Location = new System.Drawing.Point(1283, 0);
+            this.lnkSignOutKH.Location = new System.Drawing.Point(1263, 0);
             this.lnkSignOutKH.Name = "lnkSignOutKH";
-            this.lnkSignOutKH.Size = new System.Drawing.Size(89, 23);
+            this.lnkSignOutKH.Size = new System.Drawing.Size(109, 30);
             this.lnkSignOutKH.TabIndex = 1;
             this.lnkSignOutKH.TabStop = true;
             this.lnkSignOutKH.Text = "Đăng xuất";
@@ -223,7 +223,7 @@
             this.lblPageTitleKH.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPageTitleKH.Location = new System.Drawing.Point(0, 0);
             this.lblPageTitleKH.Name = "lblPageTitleKH";
-            this.lblPageTitleKH.Size = new System.Drawing.Size(70, 28);
+            this.lblPageTitleKH.Size = new System.Drawing.Size(83, 32);
             this.lblPageTitleKH.TabIndex = 0;
             this.lblPageTitleKH.Text = "label1";
             this.lblPageTitleKH.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -239,7 +239,7 @@
             // 
             // frmKhachHang
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 23F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 28F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1602, 853);

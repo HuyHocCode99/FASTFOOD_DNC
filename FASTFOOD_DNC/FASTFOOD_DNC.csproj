@@ -113,6 +113,7 @@
     <Compile Include="ucMenuKH.Designer.cs">
       <DependentUpon>ucMenuKH.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserSession.cs" />
     <EmbeddedResource Include="DangKy.resx">
       <DependentUpon>DangKy.cs</DependentUpon>
     </EmbeddedResource>
