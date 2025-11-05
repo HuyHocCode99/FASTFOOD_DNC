@@ -87,5 +87,7 @@ namespace FASTFOOD_DNC
             menuControl.Dock = DockStyle.Fill;
             pnMenu.Controls.Add(menuControl);
         }
+
+        
     }
 }

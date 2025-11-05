@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.pnlNavigation = new System.Windows.Forms.Panel();
+            this.btnBaoCaoBU = new System.Windows.Forms.Button();
+            this.btnBaoCao = new System.Windows.Forms.Button();
             this.btnDangXuat = new System.Windows.Forms.Button();
             this.btnKhachHang = new System.Windows.Forms.Button();
             this.btnMenu = new System.Windows.Forms.Button();
@@ -43,7 +45,6 @@
             this.lblPageTitle = new System.Windows.Forms.Label();
             this.pnlMainContent = new System.Windows.Forms.Panel();
             this.pnMenu = new System.Windows.Forms.Panel();
-            this.btnBaoCao = new System.Windows.Forms.Button();
             this.pnlNavigation.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picLogo)).BeginInit();
             this.pnlHeader.SuspendLayout();
@@ -53,6 +54,7 @@
             // pnlNavigation
             // 
             this.pnlNavigation.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(52)))), ((int)(((byte)(54)))));
+            this.pnlNavigation.Controls.Add(this.btnBaoCaoBU);
             this.pnlNavigation.Controls.Add(this.btnBaoCao);
             this.pnlNavigation.Controls.Add(this.btnDangXuat);
             this.pnlNavigation.Controls.Add(this.btnKhachHang);
@@ -66,6 +68,39 @@
             this.pnlNavigation.Name = "pnlNavigation";
             this.pnlNavigation.Size = new System.Drawing.Size(230, 839);
             this.pnlNavigation.TabIndex = 0;
+            // 
+            // btnBaoCaoBU
+            // 
+            this.btnBaoCaoBU.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnBaoCaoBU.FlatAppearance.BorderSize = 0;
+            this.btnBaoCaoBU.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(116)))), ((int)(((byte)(217)))));
+            this.btnBaoCaoBU.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBaoCaoBU.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBaoCaoBU.ForeColor = System.Drawing.Color.White;
+            this.btnBaoCaoBU.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnBaoCaoBU.Location = new System.Drawing.Point(0, 648);
+            this.btnBaoCaoBU.Name = "btnBaoCaoBU";
+            this.btnBaoCaoBU.Size = new System.Drawing.Size(230, 97);
+            this.btnBaoCaoBU.TabIndex = 9;
+            this.btnBaoCaoBU.Text = "Báo cáo(Bù)";
+            this.btnBaoCaoBU.UseVisualStyleBackColor = true;
+            // 
+            // btnBaoCao
+            // 
+            this.btnBaoCao.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnBaoCao.FlatAppearance.BorderSize = 0;
+            this.btnBaoCao.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(116)))), ((int)(((byte)(217)))));
+            this.btnBaoCao.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBaoCao.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBaoCao.ForeColor = System.Drawing.Color.White;
+            this.btnBaoCao.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnBaoCao.Location = new System.Drawing.Point(0, 551);
+            this.btnBaoCao.Name = "btnBaoCao";
+            this.btnBaoCao.Size = new System.Drawing.Size(230, 97);
+            this.btnBaoCao.TabIndex = 8;
+            this.btnBaoCao.Text = "Báo cáo";
+            this.btnBaoCao.UseVisualStyleBackColor = true;
+            this.btnBaoCao.Click += new System.EventHandler(this.btnBaoCao_Click);
             // 
             // btnDangXuat
             // 
@@ -92,7 +127,7 @@
             this.btnKhachHang.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnKhachHang.ForeColor = System.Drawing.Color.White;
             this.btnKhachHang.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnKhachHang.Location = new System.Drawing.Point(0, 441);
+            this.btnKhachHang.Location = new System.Drawing.Point(0, 451);
             this.btnKhachHang.Name = "btnKhachHang";
             this.btnKhachHang.Size = new System.Drawing.Size(230, 100);
             this.btnKhachHang.TabIndex = 6;
@@ -109,7 +144,7 @@
             this.btnMenu.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMenu.ForeColor = System.Drawing.Color.White;
             this.btnMenu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMenu.Location = new System.Drawing.Point(0, 341);
+            this.btnMenu.Location = new System.Drawing.Point(0, 351);
             this.btnMenu.Name = "btnMenu";
             this.btnMenu.Size = new System.Drawing.Size(230, 100);
             this.btnMenu.TabIndex = 5;
@@ -126,7 +161,7 @@
             this.btnDonHang.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDonHang.ForeColor = System.Drawing.Color.White;
             this.btnDonHang.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDonHang.Location = new System.Drawing.Point(0, 241);
+            this.btnDonHang.Location = new System.Drawing.Point(0, 251);
             this.btnDonHang.Name = "btnDonHang";
             this.btnDonHang.Size = new System.Drawing.Size(230, 100);
             this.btnDonHang.TabIndex = 4;
@@ -140,9 +175,9 @@
             this.lblUserName.Dock = System.Windows.Forms.DockStyle.Top;
             this.lblUserName.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUserName.ForeColor = System.Drawing.Color.White;
-            this.lblUserName.Location = new System.Drawing.Point(0, 219);
+            this.lblUserName.Location = new System.Drawing.Point(0, 224);
             this.lblUserName.Name = "lblUserName";
-            this.lblUserName.Size = new System.Drawing.Size(63, 22);
+            this.lblUserName.Size = new System.Drawing.Size(77, 27);
             this.lblUserName.TabIndex = 2;
             this.lblUserName.Text = "Admin";
             this.lblUserName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -156,7 +191,7 @@
             this.lblWelcome.Location = new System.Drawing.Point(0, 187);
             this.lblWelcome.Name = "lblWelcome";
             this.lblWelcome.Padding = new System.Windows.Forms.Padding(0, 10, 0, 0);
-            this.lblWelcome.Size = new System.Drawing.Size(86, 32);
+            this.lblWelcome.Size = new System.Drawing.Size(105, 37);
             this.lblWelcome.TabIndex = 1;
             this.lblWelcome.Text = "Xin chào,";
             this.lblWelcome.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -189,7 +224,7 @@
             // 
             this.picUserIcon.Dock = System.Windows.Forms.DockStyle.Right;
             this.picUserIcon.Image = global::FASTFOOD_DNC.Properties.Resources.teacher_240_1128987;
-            this.picUserIcon.Location = new System.Drawing.Point(1096, 0);
+            this.picUserIcon.Location = new System.Drawing.Point(1067, 0);
             this.picUserIcon.Name = "picUserIcon";
             this.picUserIcon.Size = new System.Drawing.Size(67, 50);
             this.picUserIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -200,9 +235,9 @@
             // 
             this.lblCurrentUserInfo.AutoSize = true;
             this.lblCurrentUserInfo.Dock = System.Windows.Forms.DockStyle.Right;
-            this.lblCurrentUserInfo.Location = new System.Drawing.Point(1163, 0);
+            this.lblCurrentUserInfo.Location = new System.Drawing.Point(1134, 0);
             this.lblCurrentUserInfo.Name = "lblCurrentUserInfo";
-            this.lblCurrentUserInfo.Size = new System.Drawing.Size(49, 24);
+            this.lblCurrentUserInfo.Size = new System.Drawing.Size(59, 29);
             this.lblCurrentUserInfo.TabIndex = 2;
             this.lblCurrentUserInfo.Text = "label1";
             this.lblCurrentUserInfo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -212,9 +247,9 @@
             // 
             this.lnkSignOut.AutoSize = true;
             this.lnkSignOut.Dock = System.Windows.Forms.DockStyle.Right;
-            this.lnkSignOut.Location = new System.Drawing.Point(1212, 0);
+            this.lnkSignOut.Location = new System.Drawing.Point(1193, 0);
             this.lnkSignOut.Name = "lnkSignOut";
-            this.lnkSignOut.Size = new System.Drawing.Size(76, 19);
+            this.lnkSignOut.Size = new System.Drawing.Size(95, 23);
             this.lnkSignOut.TabIndex = 1;
             this.lnkSignOut.TabStop = true;
             this.lnkSignOut.Text = "Đăng xuất";
@@ -229,7 +264,7 @@
             this.lblPageTitle.Location = new System.Drawing.Point(0, 0);
             this.lblPageTitle.Name = "lblPageTitle";
             this.lblPageTitle.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            this.lblPageTitle.Size = new System.Drawing.Size(85, 25);
+            this.lblPageTitle.Size = new System.Drawing.Size(101, 32);
             this.lblPageTitle.TabIndex = 0;
             this.lblPageTitle.Text = "label1";
             this.lblPageTitle.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -253,26 +288,9 @@
             this.pnMenu.Size = new System.Drawing.Size(1288, 789);
             this.pnMenu.TabIndex = 3;
             // 
-            // btnBaoCao
-            // 
-            this.btnBaoCao.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnBaoCao.FlatAppearance.BorderSize = 0;
-            this.btnBaoCao.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(116)))), ((int)(((byte)(217)))));
-            this.btnBaoCao.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBaoCao.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBaoCao.ForeColor = System.Drawing.Color.White;
-            this.btnBaoCao.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBaoCao.Location = new System.Drawing.Point(0, 541);
-            this.btnBaoCao.Name = "btnBaoCao";
-            this.btnBaoCao.Size = new System.Drawing.Size(230, 100);
-            this.btnBaoCao.TabIndex = 8;
-            this.btnBaoCao.Text = "Báo cáo";
-            this.btnBaoCao.UseVisualStyleBackColor = true;
-            this.btnBaoCao.Click += new System.EventHandler(this.btnBaoCao_Click);
-            // 
             // frmAdmin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1518, 839);
             this.Controls.Add(this.pnMenu);
@@ -315,5 +333,6 @@
         private System.Windows.Forms.Label lblUserName;
         private System.Windows.Forms.Panel pnMenu;
         private System.Windows.Forms.Button btnBaoCao;
+        private System.Windows.Forms.Button btnBaoCaoBU;
     }
 }

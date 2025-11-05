@@ -2,6 +2,8 @@
 using System.Data;
 using System.Data.SqlClient;
 using System.Windows.Forms;
+// THÊM THƯ VIỆN NÀY
+using Microsoft.Reporting.WinForms;
 
 namespace FASTFOOD_DNC
 {
@@ -11,24 +13,20 @@ namespace FASTFOOD_DNC
 
         public ucBaoCao()
         {
-            // Hàm này sẽ tự động gọi InitializeComponent()
-            // có trong file Designer.cs
             InitializeComponent();
         }
 
         private void ucBaoCao_Load(object sender, EventArgs e)
         {
-            // Thiết lập giá trị mặc định cho 30 ngày gần nhất
             dtpTuNgay.Value = DateTime.Now.AddDays(-30);
             dtpDenNgay.Value = DateTime.Now;
+            this.reportViewer1.LocalReport.DataSources.Clear();
+            this.reportViewer1.RefreshReport();
         }
 
         private void btnTaoBaoCao_Click(object sender, EventArgs e)
         {
-            // Lấy ngày bắt đầu (từ 00:00:00)
             DateTime tuNgay = dtpTuNgay.Value.Date;
-
-            // Lấy ngày kết thúc (tới 23:59:59)
             DateTime denNgay = dtpDenNgay.Value.Date.AddDays(1).AddTicks(-1);
 
             if (tuNgay > denNgay)
@@ -37,85 +35,69 @@ namespace FASTFOOD_DNC
                 return;
             }
 
+            // 1. LẤY DATATABLE (KHỚP 100% VỚI FILE XML MỚI)
+            DataTable dt = new DataTable();
             try
             {
+                // Câu truy vấn này tạo ra 5 cột và tất cả đều là STRING
+                string query = @"
+                    SELECT 
+                        CONVERT(NVARCHAR, ROW_NUMBER() OVER (ORDER BY D.NGAYDAT DESC)) AS STT,
+                        CONVERT(NVARCHAR, D.MADON) AS MaDon, 
+                        K.TENKH AS TenKH, 
+                        CONVERT(NVARCHAR, D.NGAYDAT, 103) AS NgayDat, -- 103 = dd/MM/yyyy
+                        CONVERT(NVARCHAR, D.TONGTIEN) AS TongTien
+                    FROM DONHANG D
+                    JOIN KHACHHANG K ON D.MAKH = K.MAKH
+                    WHERE 
+                        D.TRANGTHAI = N'Đã Giao'
+                        AND (D.NGAYDAT BETWEEN @TuNgay AND @DenNgay)";
+
                 using (SqlConnection conn = new SqlConnection(connection))
                 {
-                    conn.Open();
-
-                    // 1. Chạy Query 1 (Lấy Tổng Quan)
-                    LoadSoLieuTongQuan(conn, tuNgay, denNgay);
-
-                    // 2. Chạy Query 2 (Lấy Danh Sách Đơn Hàng)
-                    LoadDanhSachDonHang(conn, tuNgay, denNgay);
+                    SqlDataAdapter adapter = new SqlDataAdapter(query, conn);
+                    adapter.SelectCommand.Parameters.AddWithValue("@TuNgay", tuNgay);
+                    adapter.SelectCommand.Parameters.AddWithValue("@DenNgay", denNgay);
+                    adapter.Fill(dt);
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Lỗi khi tạo báo cáo: " + ex.Message, "Lỗi");
+                MessageBox.Show("Lỗi khi tải dữ liệu: " + ex.Message, "Lỗi");
+                return;
             }
-        }
 
-        // Hàm thực thi Query 1 (Hiển thị lên Label)
-        private void LoadSoLieuTongQuan(SqlConnection conn, DateTime tuNgay, DateTime denNgay)
-        {
-            string query = @"
-                SELECT 
-                    ISNULL(SUM(TONGTIEN), 0) AS TongDoanhThu,
-                    ISNULL(COUNT(MADON), 0) AS TongSoDonHang
-                FROM DONHANG
-                WHERE 
-                    TRANGTHAI = N'Đã Giao' 
-                    AND (NGAYDAT BETWEEN @TuNgay AND @DenNgay)";
+            // 2. ĐỔ DATATABLE VÀO REPORTVIEWER
+            reportViewer1.LocalReport.DataSources.Clear();
 
-            using (SqlCommand cmd = new SqlCommand(query, conn))
+            // 1. Tên file .rdlc (Đảm bảo Build Action = Embedded Resource)
+            reportViewer1.LocalReport.ReportPath = "rpBaoCao.rdlc";
+
+            // 2. Tên DataSet (Khớp 100% với XML mới: "dsDonHang")
+            ReportDataSource rds = new ReportDataSource("dsDonHang", dt);
+
+            reportViewer1.LocalReport.DataSources.Add(rds);
+
+            // 3. Tên Parameters (Khớp 100% với XML mới)
+            ReportParameter[] parameters = new ReportParameter[2];
+            parameters[0] = new ReportParameter("paramTuNgay", tuNgay.ToString("dd/MM/yyyy"));
+            parameters[1] = new ReportParameter("paramDenNgay", dtpDenNgay.Value.Date.ToString("dd/MM/yyyy"));
+            reportViewer1.LocalReport.SetParameters(parameters);
+
+            // 4. LÀM MỚI BÁO CÁO
+            try
             {
-                cmd.Parameters.AddWithValue("@TuNgay", tuNgay);
-                cmd.Parameters.AddWithValue("@DenNgay", denNgay);
-
-                using (SqlDataReader reader = cmd.ExecuteReader())
-                {
-                    if (reader.Read())
-                    {
-                        decimal tongDoanhThu = (decimal)reader["TongDoanhThu"];
-                        int tongSoDonHang = (int)reader["TongSoDonHang"];
-
-                        // Hiển thị lên Label
-                        lblTongDoanhThu.Text = $"{tongDoanhThu:N0} đ";
-                        lblTongSoDon.Text = tongSoDonHang.ToString();
-                    }
-                } // reader tự động đóng
+                reportViewer1.RefreshReport();
             }
-        }
+            catch (Exception ex)
+            {
+                MessageBox.Show("LỖI KHI HIỂN THỊ BÁO CÁO: " + ex.Message, "Lỗi ReportViewer");
+            }
 
-        // Hàm thực thi Query 2 (Hiển thị lên DataGridView)
-        private void LoadDanhSachDonHang(SqlConnection conn, DateTime tuNgay, DateTime denNgay)
-        {
-            string query = @"
-                SELECT 
-                    D.MADON AS N'Mã Đơn', 
-                    K.TENKH AS N'Tên Khách Hàng',
-                    D.NGAYDAT AS N'Ngày Đặt',
-                    D.TONGTIEN AS N'Tổng Tiền'
-                FROM 
-                    DONHANG D
-                JOIN 
-                    KHACHHANG K ON D.MAKH = K.MAKH
-                WHERE 
-                    D.TRANGTHAI = N'Đã Giao'
-                    AND (D.NGAYDAT BETWEEN @TuNgay AND @DenNgay)
-                ORDER BY 
-                    D.NGAYDAT DESC";
-
-            SqlDataAdapter adapter = new SqlDataAdapter(query, conn);
-            adapter.SelectCommand.Parameters.AddWithValue("@TuNgay", tuNgay);
-            adapter.SelectCommand.Parameters.AddWithValue("@DenNgay", denNgay);
-
-            DataTable dt = new DataTable();
-            adapter.Fill(dt);
-
-            // Hiển thị lên DataGridView
-            dgvDonHangDaGiao.DataSource = dt;
+            if (dt.Rows.Count == 0)
+            {
+                MessageBox.Show("Không tìm thấy dữ liệu báo cáo.", "Thông báo");
+            }
         }
     }
 }

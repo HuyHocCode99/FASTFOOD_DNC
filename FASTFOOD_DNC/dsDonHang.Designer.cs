@@ -281,9 +281,13 @@ namespace FASTFOOD_DNC {
             
             private global::System.Data.DataColumn columnMADON;
             
-            private global::System.Data.DataColumn columnMAKH;
+            private global::System.Data.DataColumn columnTENKH;
             
-            private global::System.Data.DataColumn columnDataColumn1;
+            private global::System.Data.DataColumn columnNGAYDAT;
+            
+            private global::System.Data.DataColumn columnTONGTIEN;
+            
+            private global::System.Data.DataColumn columnSTT;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
@@ -328,17 +332,33 @@ namespace FASTFOOD_DNC {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn MAKHColumn {
+            public global::System.Data.DataColumn TENKHColumn {
                 get {
-                    return this.columnMAKH;
+                    return this.columnTENKH;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn DataColumn1Column {
+            public global::System.Data.DataColumn NGAYDATColumn {
                 get {
-                    return this.columnDataColumn1;
+                    return this.columnNGAYDAT;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn TONGTIENColumn {
+                get {
+                    return this.columnTONGTIEN;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn STTColumn {
+                get {
+                    return this.columnSTT;
                 }
             }
             
@@ -379,12 +399,14 @@ namespace FASTFOOD_DNC {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public dtDonHangRow AdddtDonHangRow(string MADON, string MAKH, string DataColumn1) {
+            public dtDonHangRow AdddtDonHangRow(string MADON, string TENKH, string NGAYDAT, string TONGTIEN, string STT) {
                 dtDonHangRow rowdtDonHangRow = ((dtDonHangRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         MADON,
-                        MAKH,
-                        DataColumn1};
+                        TENKH,
+                        NGAYDAT,
+                        TONGTIEN,
+                        STT};
                 rowdtDonHangRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowdtDonHangRow);
                 return rowdtDonHangRow;
@@ -408,8 +430,10 @@ namespace FASTFOOD_DNC {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             internal void InitVars() {
                 this.columnMADON = base.Columns["MADON"];
-                this.columnMAKH = base.Columns["MAKH"];
-                this.columnDataColumn1 = base.Columns["DataColumn1"];
+                this.columnTENKH = base.Columns["TENKH"];
+                this.columnNGAYDAT = base.Columns["NGAYDAT"];
+                this.columnTONGTIEN = base.Columns["TONGTIEN"];
+                this.columnSTT = base.Columns["STT"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -417,10 +441,14 @@ namespace FASTFOOD_DNC {
             private void InitClass() {
                 this.columnMADON = new global::System.Data.DataColumn("MADON", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnMADON);
-                this.columnMAKH = new global::System.Data.DataColumn("MAKH", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnMAKH);
-                this.columnDataColumn1 = new global::System.Data.DataColumn("DataColumn1", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnDataColumn1);
+                this.columnTENKH = new global::System.Data.DataColumn("TENKH", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTENKH);
+                this.columnNGAYDAT = new global::System.Data.DataColumn("NGAYDAT", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnNGAYDAT);
+                this.columnTONGTIEN = new global::System.Data.DataColumn("TONGTIEN", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTONGTIEN);
+                this.columnSTT = new global::System.Data.DataColumn("STT", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSTT);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -579,33 +607,65 @@ namespace FASTFOOD_DNC {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string MAKH {
+            public string TENKH {
                 get {
                     try {
-                        return ((string)(this[this.tabledtDonHang.MAKHColumn]));
+                        return ((string)(this[this.tabledtDonHang.TENKHColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'MAKH\' in table \'dtDonHang\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'TENKH\' in table \'dtDonHang\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tabledtDonHang.MAKHColumn] = value;
+                    this[this.tabledtDonHang.TENKHColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string DataColumn1 {
+            public string NGAYDAT {
                 get {
                     try {
-                        return ((string)(this[this.tabledtDonHang.DataColumn1Column]));
+                        return ((string)(this[this.tabledtDonHang.NGAYDATColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'DataColumn1\' in table \'dtDonHang\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'NGAYDAT\' in table \'dtDonHang\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tabledtDonHang.DataColumn1Column] = value;
+                    this[this.tabledtDonHang.NGAYDATColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string TONGTIEN {
+                get {
+                    try {
+                        return ((string)(this[this.tabledtDonHang.TONGTIENColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'TONGTIEN\' in table \'dtDonHang\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tabledtDonHang.TONGTIENColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string STT {
+                get {
+                    try {
+                        return ((string)(this[this.tabledtDonHang.STTColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'STT\' in table \'dtDonHang\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tabledtDonHang.STTColumn] = value;
                 }
             }
             
@@ -623,26 +683,50 @@ namespace FASTFOOD_DNC {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsMAKHNull() {
-                return this.IsNull(this.tabledtDonHang.MAKHColumn);
+            public bool IsTENKHNull() {
+                return this.IsNull(this.tabledtDonHang.TENKHColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetMAKHNull() {
-                this[this.tabledtDonHang.MAKHColumn] = global::System.Convert.DBNull;
+            public void SetTENKHNull() {
+                this[this.tabledtDonHang.TENKHColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsDataColumn1Null() {
-                return this.IsNull(this.tabledtDonHang.DataColumn1Column);
+            public bool IsNGAYDATNull() {
+                return this.IsNull(this.tabledtDonHang.NGAYDATColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetDataColumn1Null() {
-                this[this.tabledtDonHang.DataColumn1Column] = global::System.Convert.DBNull;
+            public void SetNGAYDATNull() {
+                this[this.tabledtDonHang.NGAYDATColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsTONGTIENNull() {
+                return this.IsNull(this.tabledtDonHang.TONGTIENColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetTONGTIENNull() {
+                this[this.tabledtDonHang.TONGTIENColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsSTTNull() {
+                return this.IsNull(this.tabledtDonHang.STTColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetSTTNull() {
+                this[this.tabledtDonHang.STTColumn] = global::System.Convert.DBNull;
             }
         }
         
